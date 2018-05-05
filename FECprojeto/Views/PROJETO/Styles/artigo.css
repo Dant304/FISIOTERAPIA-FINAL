@@ -1,0 +1,19 @@
+#estruturaArtigo{
+    display: grid;
+    background-color: rgb(41, 41, 119);
+    height: 93%;
+    width: 50%;
+    border-radius: 30px;
+}
+input, textarea{
+   width: 500px;
+}
+input{
+    background-color: antiquewhite;
+}
+textarea{
+    height: 500px;
+}
+hgroup{
+    display: grid;
+}
