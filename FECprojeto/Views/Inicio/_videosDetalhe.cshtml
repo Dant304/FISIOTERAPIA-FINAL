@@ -1,0 +1,26 @@
+﻿@model CamadaDeDados.Banco.video
+<style>
+    #player {
+    text-align:center;
+
+    }
+    #player > h2{
+       background-color:white;
+       border:solid;
+       border-width:1px;
+       border-color:black;
+       color:black;
+      
+    }
+    iframe{
+        margin-left: 50px;
+      
+    }
+</style>
+@{ Layout = null;}
+
+
+<div id="player">
+    <h2 id="title">@Model.titulo_video</h2>
+    <iframe  width="630" height="320" src="@Model.descricao_video" frameborder="1" allow="autoplay"  allowfullscreen></iframe>
+</div>

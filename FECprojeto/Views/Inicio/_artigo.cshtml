@@ -1,0 +1,73 @@
+﻿@model IEnumerable<CamadaDeDados.Banco.artigo>
+
+@{
+    ViewBag.Title = "ViewTeste";
+    Layout = null;
+}
+
+<style>
+    #link:hover {
+        background-color: white;
+        box-shadow: blue 1px 1px 20px 1px;
+        cursor: pointer;
+    }
+    #link:hover>td{
+        color:dodgerblue;
+    }
+    h2:hover {
+        background-color: white;
+        box-shadow: 1px 1px 20px 1px blue;
+        color: blue;
+        width: 30%;
+        border-radius: 50%;
+    }
+</style>
+
+<table class="table table-dark" border="1">
+    <tr>
+        <th>
+            <h4>Titulo</h4>
+        </th>
+        <th>
+
+            <h4>Data</h4>
+        </th>
+        @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario != "fis")
+        {
+            <th>
+                <h4>Fisioterapeuta</h4>
+            </th>
+        }
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+
+        <tr id="link" onclick="artigoDetalhes(@item.id_artDic);">
+            <td >
+                @Html.DisplayFor(modelItem => item.titulo_artDic)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.data_artigo)
+            </td>
+            @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario != "fis")
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.fisioterapeuta.nome_fis)
+                </td>
+            }
+            <td>
+                @Html.ActionLink("Delete", "Delete", new { id = item.id_artDic })
+            </td>
+
+        </tr>
+    }
+
+</table>
+<h1 style="text-align:center;">@ViewBag.mensagem</h1>
+@if(ViewBag.mensagem != null)
+{
+<h2 style="text-align:center;cursor:pointer;">Deseja publicar um artigo?</h2>
+}
+

@@ -1,11 +1,9 @@
-*{
-    margin: 0px auto;
-}
+
 
 
 form{
 text-align:center;
-margin:100px;
+
 }
 button[onCLick="sairInicial()"]{
     background-color: tomato;
@@ -17,17 +15,25 @@ button[onCLick="sairInicial()"]:hover{
 button{
     display:inline-block;
     margin-top:40px;
-    box-shadow:black 0px 2px 20px 2px;
+    box-shadow:black 1px 2px 20px 2px;
 }
 
 #btnVoltar{
     background-color:royalblue;
 }
 #TS{
-    width:90px;
-    border-radius:9px;
+    margin-top:3px;
     background-color:white;
-    border:inset;
-    border-width:2px;
-    margin-bottom:2px;
+    text-align:center;
+    border:solid 1px;
+    box-shadow:white 2px 2px 12px 2px;
+}
+
+#Mensagem {
+    text-align: center;
+    margin-top: 4px;
+    background-color: red;
+    border: thick;
+    border-radius: 30%;
+    color: white;
 }

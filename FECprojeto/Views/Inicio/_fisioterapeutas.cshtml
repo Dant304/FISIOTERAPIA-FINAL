@@ -1,0 +1,179 @@
+﻿@model IEnumerable<CamadaDeDados.Banco.fisioterapeuta>
+
+@{ Layout = null;}
+<style>
+    #pesq {
+        text-align: center;
+        margin-bottom: 2%;
+    }
+
+
+</style>
+@if(FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario == "fis")
+{
+<script>
+    function pegarID(id) {
+        PegarPorId(id);
+    }
+</script>
+<style>
+    #link:hover {
+        background-color: white;
+        box-shadow: blue 1px 1px 20px 1px;
+        cursor: pointer;
+    }
+
+        #link:hover > td {
+            color: dodgerblue;
+        }
+</style>
+}
+else
+{
+    <script>
+        function details(id) {
+            fisioDetails(id);
+        }
+    </script>
+    <style>
+        h6:hover{
+            background-color:white;
+            box-shadow:1px 1px 20px 1px blue;
+            color:dodgerblue;
+            cursor:pointer;
+        }
+        #link:hover {
+            background-color: white;
+            box-shadow: 1px 1px 20px 1px blue;
+            color: dodgerblue;
+            cursor: pointer;
+        }
+        #link:hover>td{
+            color:dodgerblue;
+        }
+        #Options:hover{
+            cursor:default;
+        }
+        
+    </style>
+}
+
+
+<div id="pesq">
+
+    <input style="width:400px;" type="search" id="pesquisa" name="nome" placeholder="Pesquisar nome" />
+    <button onclick="search();" type="submit"><i class="fa fa-search"></i>Pesquisar</button>
+</div>
+<div style="overflow:scroll;">
+    <table class="table table-dark" border="1" width="100">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nome_fis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email_fis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.senha_fis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.dados_fis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cel_fis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cpf_fis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rg_fis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nasc_fis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ativo_fis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.adm_fis)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sexo_fis)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+
+
+            <tr id="link">
+                <td onclick="pegarID(@item.id_fis);">
+                    @Html.DisplayFor(modelItem => item.nome_fis)
+                </td>
+                <td onclick="pegarID(@item.id_fis);">
+                    @Html.DisplayFor(modelItem => item.email_fis)
+                </td>
+                <td onclick="pegarID(@item.id_fis);">
+                    @Html.DisplayFor(modelItem => item.senha_fis)
+                </td>
+                <td onclick="pegarID(@item.id_fis);">
+                    @Html.DisplayFor(modelItem => item.dados_fis)
+                </td>
+                <td onclick="pegarID(@item.id_fis);">
+                    @Html.DisplayFor(modelItem => item.cel_fis)
+                </td>
+                <td onclick="pegarID(@item.id_fis);">
+                    @Html.DisplayFor(modelItem => item.cpf_fis)
+                </td>
+                <td onclick="pegarID(@item.id_fis);">
+                    @Html.DisplayFor(modelItem => item.rg_fis)
+                </td>
+                <td onclick="pegarID(@item.id_fis);">
+                    @Html.DisplayFor(modelItem => item.nasc_fis)
+                </td>
+                @if (item.ativo_fis == true)
+                {
+                    <td onclick="pegarID(@item.id_fis)">Sim</td>
+                }
+                else
+                {
+                    <td onclick="pegarID(@item.id_fis);">Não</td>
+                }
+                @if (item.adm_fis == true)
+                {
+                    <td onclick="pegarID(@item.id_fis);">Sim</td>
+                }
+                else
+                {
+                    <td onclick="pegarID(@item.id_fis);">Não</td>
+                }
+                @if (item.sexo_fis == true)
+                {
+                    <td onclick="pegarID(@item.id_fis);">Masculino</td>
+                }
+                else
+                {
+                    <td onclick="pegarID(@item.id_fis);">Feminino</td>
+                }
+               
+                <td id="Options">
+                    @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario == "pac")
+                    {
+                        <h6 onclick="details(@item.id_fis);">Ver detalhes</h6>
+                    }
+                    @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario == "fis")
+                    {
+                       <button type="button" style="width:90px;">Deletar?</button>
+                    }
+                </td>
+            </tr>
+
+        }
+
+    </table>
+
+
+</div>
+
+<h1>@ViewBag.mensagem</h1>

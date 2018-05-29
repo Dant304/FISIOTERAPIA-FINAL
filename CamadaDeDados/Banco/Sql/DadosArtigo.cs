@@ -1,6 +1,6 @@
 ﻿
 
-using CamadaDeDados.Banco.TabelasSQL;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -47,25 +47,33 @@ namespace CamadaDeDados.Banco.Sql
             if (id == 0)
             {
                 //Retornar vários artigos que estejam ativos na tabela.
-                return ( from art in db.artigos where art.ativo_artigo == true select art).ToList();
+                return (from art in db.artigos where art.ativo_artigo == true select art).ToList();
             }
             else
             {
                 //Retornar vários artigos de um fisioterapeuta em específico e que estejam ativos na tabela. 
-                return (from art in db.artigos where art.id_artDic == id && art.ativo_artigo == true select art).ToList();
+                return (from art in db.artigos where art.id_fis == id && art.ativo_artigo == true select art).ToList();
             }
 
         }
 
+      //  public List<artigo> ObterArtigoDeUmFisioterapeuta(int id)
+      //  {
+            
+      //      DadosFisioterapeuta df = new DadosFisioterapeuta();
+      //      var fis = df.ObterPorId(id);
+      //  }
+
         //Desativando("excluir") um artigo da tabela.
-        public void DesativarArtigo(int id, bool desativar)
+        public void DesativarArtigo(int? id)
         {
-            db.Database.ExecuteSqlCommand(@"update artigo_dica set ativo_artDic = {0} where id_art = {1}",desativar,id);
+            bool desativar = false;
+            db.Database.ExecuteSqlCommand(@"update artigos set ativo_artigo = {0} where id_artDic = {1}", desativar,id);
         }
 
-        public artigo PegarArtigo()
+        public artigo PegarArtigo(int id)
         {
-            return (from art in db.artigos where art.id_artDic == 4 select art).FirstOrDefault();
+            return (from art in db.artigos where art.id_artDic == id select art).FirstOrDefault();
         }
     }
 }

@@ -1,0 +1,114 @@
+﻿@model CamadaDeDados.Banco.TabelasSQL.fisioterapeuta
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>fisioterapeuta</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.img_fis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.img_fis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nome_fis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nome_fis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.email_fis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.email_fis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.senha_fis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.senha_fis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dados_fis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dados_fis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cel_fis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cel_fis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cpf_fis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cpf_fis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.rg_fis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.rg_fis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nasc_fis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nasc_fis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ativo_fis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ativo_fis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.adm_fis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.adm_fis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.sexo_fis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.sexo_fis)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_fis }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

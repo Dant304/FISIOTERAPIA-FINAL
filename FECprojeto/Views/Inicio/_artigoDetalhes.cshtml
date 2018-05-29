@@ -1,0 +1,22 @@
+﻿@model CamadaDeDados.Banco.artigo
+
+
+
+<h2>@Model.titulo_artDic</h2>
+
+<p>@Model.conteudo_artDic</p>
+@if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario == "fis")
+{
+    <button type="button" style="text-align:center; font-size:medium; background-color:mediumpurple;color:white;" onclick="exclusao(@Model.id_artDic);">Eliminar?</button>
+}
+else
+{
+    <button type="button" style="text-align:center;" onclick="artigosSource(null);">Voltar</button>
+}
+<style>
+    button:hover {
+        cursor: pointer;
+        background-color: white;
+        color: dodgerblue;
+    }
+</style>

@@ -1,0 +1,54 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    left: 0%;
+    top: 0 auto;
+    bottom: 0px;
+  }
+  html , body{
+    height: 100%;
+  }
+
+  .form{
+    margin-top: 250px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  input{
+   
+  }
+  input:hover{
+      box-shadow: 5px 10px hsl(238, 90%, 85%);
+  }
+  button{
+    margin-top: 10px;
+  }
+  footer{
+    bottom: 0%;
+  left: 48%;
+      position: absolute;
+    color: rgb(103, 103, 182);
+    bottom: 0px;
+  }
+body {
+    background-image: url("/imagens/logo.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+  h2{
+    text-align: center;
+    color: rgb(103, 103, 182);
+    font-style: italic;
+    font-size: 30px;
+    margin-top: 30px;
+  }
+  #mensagem{
+    text-align: center;
+    background-color: rgb(95, 95, 204);
+    margin-top: 100px;
+    border-radius: 30px;
+    color: white;
+    font-size: 30px;
+    width: 300px;
+    padding: 10px 20px;
+  }

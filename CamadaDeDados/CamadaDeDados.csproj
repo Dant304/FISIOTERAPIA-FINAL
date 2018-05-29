@@ -38,11 +38,15 @@
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,26 +55,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Banco\TabelasSQL\acessar.cs" />
+    <Compile Include="Banco\TabelasSQL\artigo.cs" />
+    <Compile Include="Banco\bancoFEC.cs" />
+    <Compile Include="Banco\TabelasSQL\categoria_problema.cs" />
+    <Compile Include="Banco\TabelasSQL\clinica.cs" />
+    <Compile Include="Banco\TabelasSQL\fisioterapeuta.cs" />
+    <Compile Include="Banco\TabelasSQL\mensagem.cs" />
+    <Compile Include="Banco\TabelasSQL\paciente.cs" />
+    <Compile Include="Banco\TabelasSQL\pai.cs" />
     <Compile Include="Banco\Sql\DadosArtigo.cs" />
     <Compile Include="Banco\Sql\DadosCategoria.cs" />
     <Compile Include="Banco\Sql\DadosClinica.cs" />
-    <Compile Include="Banco\Sql\DadosEstado.cs" />
     <Compile Include="Banco\Sql\DadosFisioterapeuta.cs" />
     <Compile Include="Banco\Sql\DadosMensagem.cs" />
     <Compile Include="Banco\Sql\DadosPaciente.cs" />
     <Compile Include="Banco\Sql\DadosPais.cs" />
     <Compile Include="Banco\Sql\DadosVideo.cs" />
     <Compile Include="Banco\bancoSQL.cs" />
-    <Compile Include="Banco\TabelasSQL\acessar.cs" />
-    <Compile Include="Banco\TabelasSQL\artigo.cs" />
-    <Compile Include="Banco\bancoFEC.cs" />
-    <Compile Include="Banco\TabelasSQL\categoria_problema.cs" />
-    <Compile Include="Banco\TabelasSQL\clinica.cs" />
-    <Compile Include="Banco\TabelasSQL\estado.cs" />
-    <Compile Include="Banco\TabelasSQL\fisioterapeuta.cs" />
-    <Compile Include="Banco\TabelasSQL\mensagem.cs" />
-    <Compile Include="Banco\TabelasSQL\paciente.cs" />
-    <Compile Include="Banco\TabelasSQL\pai.cs" />
     <Compile Include="Banco\TabelasSQL\video.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

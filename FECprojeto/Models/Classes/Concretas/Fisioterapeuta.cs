@@ -1,22 +1,19 @@
-﻿using CamadaDeDados.Banco;
-using CamadaDeDados.Banco.TabelasSQL;
+﻿
+using CamadaDeDados.Banco;
 using CamadaDeNegocios.Negocios;
 using FECprojeto.Models.Classes.Abstrata;
-using FECprojeto.Models.Classes.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Drawing;
 
 namespace FECprojeto.Models.Classes.Concretas
 {
     /*Classe filha : Classe Pai*/
-    public class Fisioterapeuta : Pessoa , IUsuarios
+    public class Fisioterapeuta : Pessoa
     {
         /*Propriedades da classe*/
 
        
-        public byte[] img_fis { get; set; } 
+        public Image img_fis { get; set; } 
         public string senha_fis { get; set; }
         public string dados_fis { get; set; }
         public bool ativo_fis { get; set; }
@@ -28,10 +25,11 @@ namespace FECprojeto.Models.Classes.Concretas
         {
 
         }
-        public Fisioterapeuta(int id, byte[] img_fis, string nome, string telCelular, string cpf, string rg, string email, string senha, String dadosFisio, DateTime dataDeAniversario, bool adm)
+        public Fisioterapeuta(int id, Image img_fis, string nome, string telCelular, string cpf, string rg, string email, string senha, String dadosFisio, DateTime dataDeAniversario, bool adm)
         {
             SetIdPessoa(id);
             this.nome = nome;
+            this.img_fis = img_fis;
             this.telCelular = telCelular;
             this.cpf = cpf;
             this.rg = rg;
@@ -41,7 +39,7 @@ namespace FECprojeto.Models.Classes.Concretas
             this.dataDeAniversario = dataDeAniversario;
             this.adm_fis = adm;
         }
-        public Fisioterapeuta(int id, byte[] img_fis, string nome, string cpf, string rg, string senha, string email, String dadosFisio, DateTime dataDeAniversario, bool adm)
+        public Fisioterapeuta(int id, Image img_fis, string nome, string cpf, string rg, string senha, string email, String dadosFisio, DateTime dataDeAniversario, bool adm)
         {
             SetIdPessoa(id);
             this.img_fis = img_fis;
@@ -73,10 +71,15 @@ namespace FECprojeto.Models.Classes.Concretas
         {
 
         }
-
+        public fisioterapeuta ObterUmFisio(int id)
+        {
+            Fisioterapeuta_Negocios fn = new Fisioterapeuta_Negocios();
+            return fn.ObterUmFisio(id);
+        }
         public void logar()
         {
             throw new NotImplementedException();
         }
+
     }
 }

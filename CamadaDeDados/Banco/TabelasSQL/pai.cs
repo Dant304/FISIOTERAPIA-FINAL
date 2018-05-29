@@ -1,4 +1,4 @@
-namespace CamadaDeDados.Banco.TabelasSQL
+namespace CamadaDeDados.Banco
 {
     using System;
     using System.Collections.Generic;
@@ -11,7 +11,7 @@ namespace CamadaDeDados.Banco.TabelasSQL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public pai()
         {
-            estadoes = new HashSet<estado>();
+            clinicas = new HashSet<clinica>();
         }
 
         [Key]
@@ -25,7 +25,11 @@ namespace CamadaDeDados.Banco.TabelasSQL
         [StringLength(5)]
         public string sigla_pais { get; set; }
 
+        [Required]
+        [StringLength(200)]
+        public string estado { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<estado> estadoes { get; set; }
+        public virtual ICollection<clinica> clinicas { get; set; }
     }
 }

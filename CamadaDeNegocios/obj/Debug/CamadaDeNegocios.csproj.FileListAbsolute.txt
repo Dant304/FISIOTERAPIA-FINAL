@@ -40,3 +40,5 @@ C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-ma
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeNegocios\obj\Debug\CamadaDeNegocios.csproj.CopyComplete
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeNegocios\obj\Debug\CamadaDeNegocios.dll
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeNegocios\obj\Debug\CamadaDeNegocios.pdb
+C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeNegocios\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeNegocios\bin\Debug\Newtonsoft.Json.xml

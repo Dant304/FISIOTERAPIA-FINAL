@@ -9,27 +9,53 @@
     <link href="~/content/inicio/index.css" rel="stylesheet" />
     <link href="~/content/inicio/inicial.css" rel="stylesheet" />
     <link href="~/content/inicio/style.css" rel="stylesheet" />
+    <script src="~/scripts/jquery-1.10.2.min.js"></script>
+    <link href="~/Content/Inicio/config.css" rel="stylesheet" />
     <script src="~/scripts/inicio/inicial.js"></script>
+    <script>
+ 
+
+        function Inicio() {
+            location.href = "../";
+        }
+
+        function Config() {
+            $("#Inicio").hide();
+            $("#formArtigos").hide();
+            $("#formConfig").slideDown();
+        }
+    </script>
 </head>
 <body>
     <nav>
         <div class="grid">
+            <div id="inicioBtn" onclick="Inicio();">Inicio</div>
             <div id="videosBtn">Videos</div>
-            <div id="artigosBtn">Artigos</div>
+            <div id="artigosBtn" onclick="artigos();">Artigos</div>
             <div id="profissionaisBtn">Profissionais</div>
-            <div id="configBtn" onClick="config()">Configurações</div>
-            <div id="sairBtn" onClick="sair()">Sair</div>
+            <div id="configBtn" onclick="Config();">Configurações</div>
+            <div id="sairBtn" onClick="sair();">Sair</div>
         </div>
         <div id="imgUser">
             <img src="" />
         </div>
-  
-    </nav>
-        @RenderBody()
-        <hr />
 
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
-        </footer>
+    </nav>
+    @RenderBody()
+    <hr />
+    <form id="formConfig" action="/Inicio/AlterarSenha" method="post">
+        <div id="TS">
+            <h4>Trocar Senha</h4>
+        </div>
+        <input type="email" placeholder="Digite seu email" required="required" name="email" /><br>
+        <input type="password" placeholder="Senha atual" required="required" name="senhaAtual" /><br>
+        <input type="password" placeholder="Nova Senha" required="required" name="senhaNova" /><br>
+        <input type="password" placeholder="Repita nova senha" required="required" name="senhaNova1" /><br>
+        <h5 id="Mensagem">@ViewBag.mensagem</h5>
+        <button id="btnVoltar" onclick="sairInicial()">Voltar</button> <button type="submit">Salvar</button> <button onCLick="sairInicial()">Cancelar</button>
+    </form>
+    <footer>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
 </body>
 </html>

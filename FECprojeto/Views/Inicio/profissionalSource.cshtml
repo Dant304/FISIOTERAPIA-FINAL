@@ -1,0 +1,11 @@
+﻿
+@{
+                ViewBag.Title = "profissionalSource";
+}
+
+<h3>Profissionais</h3>
+<form method="post" action="@Html.Action("lista","Inicio")">
+    <input type="search" id="pesquisa" name="nome" placeholder="Pesquisar nome/identificação" />
+    <button type="submit"><i class="fa fa-search"></i>Pesquisar</button>
+</form>
+

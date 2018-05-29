@@ -1,4 +1,4 @@
-namespace CamadaDeDados.Banco.TabelasSQL
+namespace CamadaDeDados.Banco
 {
     using System;
     using System.Collections.Generic;
@@ -21,8 +21,10 @@ namespace CamadaDeDados.Banco.TabelasSQL
         [StringLength(30)]
         public string titulo_video { get; set; }
 
+        public byte[] imagem_video { get; set; }
+
         [Required]
-        public byte[] midia_video { get; set; }
+        public string url_video { get; set; }
 
         [Required]
         [StringLength(1000)]

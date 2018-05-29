@@ -1,4 +1,4 @@
-namespace CamadaDeDados.Banco.TabelasSQL
+namespace CamadaDeDados.Banco
 {
     using System;
     using System.Collections.Generic;

@@ -1,6 +1,5 @@
 ﻿using CamadaDeDados.Banco;
 using CamadaDeDados.Banco.Sql;
-using CamadaDeDados.Banco.TabelasSQL;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -13,13 +12,14 @@ namespace CamadaDeNegocios.Negocios
     public class Fisioterapeuta_Negocios
     {
         DadosFisioterapeuta df = new DadosFisioterapeuta();
-
+        DadosArtigo da = new DadosArtigo();
+        DadosVideo dv = new DadosVideo();
         public void SalvarFisioterapeuta(fisioterapeuta fisioterapeuta)
         {
             if (fisioterapeuta != null)
             {
                 DadosFisioterapeuta df = new DadosFisioterapeuta();
-             
+
                 df.SalvarFisioterapeuta(fisioterapeuta);
             }
             else
@@ -48,6 +48,41 @@ namespace CamadaDeNegocios.Negocios
         public fisioterapeuta ObterPorLogin(string email, string senha)
         {
             return df.ObterPorLogin(email, senha);
+        }
+        public void AlterarSenha(string email, string senhaNova)
+        {
+            if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(senhaNova))
+            {
+                df.AlterarSenha(email, senhaNova);
+            }
+
+        }
+
+        public List<fisioterapeuta> ObterFisio( string nome)
+        {
+             return df.ObterUmFisioterapeutas(nome);
+        }
+
+        public List<fisioterapeuta> ObterSem()
+        {
+            return df.ObterTodosSem();
+        }
+
+        public List<artigo> TodosArtigos(int id)
+        {
+            return da.ObterTodosArtigos(id);
+        }
+        public List<video> TodosOsVideos(int id)
+        {
+            return dv.ListarVideos(id);
+        }
+        public List<fisioterapeuta> pesquisarFisio(string nome)
+        {
+           return df.ObterUmFisioterapeutas(nome);
+        }
+        public fisioterapeuta ObterUmFisio(int id)
+        {
+            return df.ObterPorId(id);
         }
     }
 }

@@ -1,0 +1,10 @@
+﻿@{ Layout = null;}
+<form action="/Inicio/AlterarSenha" method="post">
+
+    <input type="email" placeholder="Digite seu email" required="required" name="email" /><br>
+    <input type="password" placeholder="Senha atual" required="required" name="senhaAtual" /><br>
+    <input type="password" placeholder="Nova Senha" required="required" name="senhaNova" /><br>
+    <input type="password" placeholder="Repita nova senha" required="required" name="senhaNova1" /><br>
+    <h5 id="Mensagem">@ViewBag.mensagem</h5>
+    <button id="btnVoltar" onclick="sairInicial()">Voltar</button> <button type="submit">Salvar</button> <button onCLick="sairInicial()">Cancelar</button>
+</form>

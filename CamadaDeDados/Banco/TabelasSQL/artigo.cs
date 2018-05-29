@@ -1,4 +1,4 @@
-namespace CamadaDeDados.Banco.TabelasSQL
+namespace CamadaDeDados.Banco
 {
     using System;
     using System.Collections.Generic;
@@ -27,7 +27,7 @@ namespace CamadaDeDados.Banco.TabelasSQL
         public string conteudo_artDic { get; set; }
 
         public bool ativo_artigo { get; set; }
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}")]
+        [DisplayFormat(DataFormatString = "0:dd/MM/yyyy")]
         public DateTime data_artigo { get; set; }
 
         public int id_cat { get; set; }

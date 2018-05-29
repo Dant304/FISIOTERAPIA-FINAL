@@ -1,31 +1,38 @@
-.grid > div{
-    background-color: transparent;
-    color: white;
-    border: solid 1px blue;
-   
+.MenuTopo {
+  position:static;
+  height:50px;
+  background-color:midnightblue;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  text-align:center;
+  box-shadow: black 5px 5px 40px 5px;
 }
 
-#menu{
+    .MenuTopo > div {
+        display: inline-flex;
+        margin-top: 6px;
+
+    }
+
+ul{
+  
+   text-align:left;
+    background-color:grey;
+    width:150px;
+    border-bottom-right-radius:2px;
+    border-bottom-left-radius:2px;
+    list-style-type:none;
+    color:dodgerblue;
+}
+div{
     text-align:center;
 }
+ul > p{
+    color:blue;
+}
 
-.grid{
-    display:inline-flex;
+ul > li>p:hover{
+    cursor:pointer;
+    background-color:white;
     
-}
-
-.opcoes {
-    background-color: transparent;
-}
-
-button[type="reset"]{
-    background-color: tomato;
-}
-
-button[type="reset"]:hover{
-    background-color: rgb(221, 33, 0);
-}
-
-input{
-    margin-left: 6px;
 }

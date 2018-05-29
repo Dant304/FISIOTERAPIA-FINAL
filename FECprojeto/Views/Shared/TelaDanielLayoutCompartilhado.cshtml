@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="~/Scripts/TelaDanielFisioterapeuta/inicial.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" charset="utf-8">
+    <title>Fisioterapia em casa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/TelaDanielFisioterapeuta/style.css" rel="stylesheet" />
+    <link href="~/Content/TelaDanielFisioterapeuta/index.css" rel="stylesheet" />
+    <link href="~/Content/TelaDanielFisioterapeuta/inicial.css" rel="stylesheet" />
+    <link href="~/Content/TelaProfissional/index.css" rel="stylesheet" />
+    <link href="~/Content/TelaDanielFisioterapeuta/inicial.css" rel="stylesheet" />
+    <link href="~/Content/TelaProfissional/style.css" rel="stylesheet" />
+    <link href="~/Content/TelaDanielFisioterapeuta/adm.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/scripts/inicio/config.js"></script>
+    <link href="~/content/inicio/config.css" rel="stylesheet" />
+    <script src="~/Scripts/TelaDanielFisioterapeuta/inicial.js"></script>
+    <script src="~/Scripts/Inicio/ListarProfissionais.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <!-- Estava pondo um relógio que mostrasse o tempo da sessão do usuário-->
+    <style>
+        #all {
+            position: center;
+            margin: 0 auto;
+            background-color: black;
+        }
+
+
+
+        #submenu, #submenu2 {
+            border: solid;
+            border-width: 2px;
+            border-radius: 5px;
+            color: white;
+            background-color: black;
+            display: none;
+            margin: 0 5px;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        hr {
+            margin: 1%;
+        }
+
+        #submenu > li, #submenu2 > li {
+            padding: 6px 10px;
+        }
+
+        li:hover, li:hover {
+            background-color: white;
+            color: dodgerblue;
+            box-shadow: 1px 1px 30px 1px blue;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav id="btns">
+        <div class="grid">
+            <div onclick="Inicio();">
+                @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.imagemUsuario == null)
+                {
+                    <img src="@FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.imagemNull" alt="perfil" />
+                }
+                else
+                {
+                    <img src="@FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.imagemUsuario" alt="perfil" />
+                }
+
+            </div>
+            <div id="videosBtn" onCLick="videoSourcePage()">Videos</div>
+            <div id="artigosBtn" onClick="artigosSource()">Artigos</div>
+            <div id="profissionaisBtn">
+                Buscar
+
+                @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario == "pac")
+                {
+                    <ul id="submenu">
+                        <li onClick="profissionalSource();">Fisioterapeutas</li>
+                    </ul>
+                }
+                else
+                {
+                    <ul id="submenu">
+                        <li onClick="profissionalSource();">Fisioterapeutas</li>
+                        
+                        <li>Pacientes</li>
+                    </ul>
+                }
+
+
+
+            </div>
+
+            @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.Adm == true)
+            {
+                <div id="admBtn" onclick="modal();">
+                    Cadastrar  <ul id="submenu2">
+                        <li>Fisioterapeutas</li>
+                       
+                        <li>Pacientes</li>
+                    </ul>
+                </div>
+            }
+            <div id="configBtn" onClick="config()">Configurações</div>
+
+            <div style="background-color:red;width:130px;margin-left:5%;" id="sairBtn" onClick="sair()">Sair</div>
+        </div>
+     
+    </nav>
+    @RenderBody()
+    <div id="partial">
+    </div>
+
+</body>
+</html>
+

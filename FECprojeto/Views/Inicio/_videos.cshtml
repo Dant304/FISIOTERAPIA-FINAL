@@ -1,0 +1,58 @@
+﻿@model IEnumerable<CamadaDeDados.Banco.video>
+@{
+    Layout = null;
+}
+<style>
+    .table > tr > th {
+        background-color: white;
+    }
+
+    h2:hover {
+        background-color: white;
+        box-shadow: 1px 1px 20px 1px blue;
+        color: blue;
+        width: 30%;
+        border-radius: 50%;
+    }
+</style>
+
+<table class="table table-dark">
+    <tr>
+        <th>
+            Categoria
+        </th>
+        <th>
+            Titulo
+        </th>
+        @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario != "fis")
+        {
+            <th>
+                Publicado por:
+            </th>
+        }
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.categoria_problema.nome_cat)
+            </td>
+            <td>
+                <a style="cursor:pointer;" onclick="videoDetalhes(@item.id_video)">  @Html.DisplayFor(modelItem => item.titulo_video)</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fisioterapeuta.nome_fis)
+            </td>
+
+        </tr>
+    }
+
+</table>
+
+<h1 style="text-align:center;">@ViewBag.Send</h1>
+@if (ViewBag.Send != null)
+{
+    <h2 style="text-align:center;cursor:pointer;">Deseja publicar um video?</h2>
+}

@@ -1,9 +1,19 @@
 $(document).ready(() => {
-    const $btnFisio = $("#btnFisio");
-    const $btnPaci = $("#btnPaci");
+    const $cadastrarBtn = $("#cadastrarBtn");
+    const $listaDeOpcoes = $("#listaDeOpcoes");
+
+    $("#listaDeOpcoes").hide();
 
     $("#formFisioterapeuta").hide();
         $("#formPaciente").hide();
+
+    $($cadastrarBtn).click(() => {
+        $("#listaDeOpcoes").slideDown();
+    }),
+
+        function sairOpcoes() {
+            $("#listaDeOpcoes").hide();
+                   }
 
     $($btnFisio).click(() => {
         $("#formFisioterapeuta").slideDown();
@@ -22,4 +32,8 @@ $(document).ready(() => {
             location.href = "../index.html";
         }
         
-    }
+}
+
+function retornar() {
+    location.href = "../Inicio/IndexFisioterapeuta";
+}

@@ -1,0 +1,25 @@
+﻿@model FECprojeto.Models.Classes.Concretas.Paciente
+@{
+    ViewBag.Title = "IndexPaciente";
+}
+<script>
+    function model() {
+        return 2;
+    }
+</script>
+
+<h2>IndexPaciente</h2>
+
+<h3>@Model.nome</h3>
+
+<form id="formConfig" action="/Inicio/AlterarSenha" method="post">
+    <div id="TS">
+        <h4>Trocar Senha</h4>
+    </div>
+    <input type="email" placeholder="Digite seu email" required="required" name="email" /><br>
+    <input type="password" placeholder="Senha atual" required="required" name="senhaAtual" /><br>
+    <input type="password" placeholder="Nova Senha" required="required" name="senhaNova" /><br>
+    <input type="password" placeholder="Repita nova senha" required="required" name="senhaNova1" /><br>
+    <h5 id="Mensagem">@ViewBag.mensagem</h5>
+    <button id="btnVoltar" onclick="sairInicial()">Voltar</button> <button type="submit">Salvar</button> <button onCLick="sairInicial()">Cancelar</button>
+</form>

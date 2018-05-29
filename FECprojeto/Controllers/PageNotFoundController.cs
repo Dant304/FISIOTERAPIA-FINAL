@@ -13,5 +13,9 @@ namespace FECprojeto.Controllers
         {
             return View();
         }
+       // public ActionResult View()
+        //{
+          //  return View("View");
+        //}
     }
 }

@@ -1,3 +1,3 @@
 function sairInicial(){
-    location.href = "../inicial.html";
+    location.href = "../Inicio/";
 }

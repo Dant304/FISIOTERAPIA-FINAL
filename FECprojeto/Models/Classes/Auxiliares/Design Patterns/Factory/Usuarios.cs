@@ -1,49 +1,42 @@
-﻿using CamadaDeDados.Banco.TabelasSQL;
-using CamadaDeNegocios.Negocios;
-using FECprojeto.Models.Classes.Concretas;
-using FECprojeto.Models.Classes.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using CamadaDeDados.Banco;
+using FECprojeto.Models.Classes.Auxiliares.Classes_de_persistência;
 
 namespace FECprojeto.Models.Classes.Auxiliares.Design_Patterns.Factory
 {
-    class Usuarios
+    public class Usuarios
     {
-        Paciente_Negocios bp = new Paciente_Negocios();
-        Fisioterapeuta_Negocios bf = new Fisioterapeuta_Negocios();
-        public IUsuarios ObterUsuario(string tipo, bool comCelular,fisioterapeuta fisio,paciente pac)
+        UsuariosPersistencia up = new UsuariosPersistencia();
+
+        public Fisioterapeuta_Paciente ObterUsuario(string tipo, bool comCelular,fisioterapeuta fis,paciente pac)
         {
-            IUsuarios user = null;
+            Fisioterapeuta_Paciente user = new Fisioterapeuta_Paciente();
 
             if (tipo == "fisio")
             {
                 if (comCelular == true)
                 {
-                    if(fisio.cel_fis == null)
-                    {
-                        user = new Fisioterapeuta(fisio.id_fis, fisio.img_fis,fisio.nome_fis, fisio.cpf_fis,fisio.rg_fis, fisio.senha_fis,fisio.email_fis, fisio.dados_fis,fisio.nasc_fis,fisio.adm_fis);
-                    }
-                    else if(fisio.cel_fis != null)
-                    {
-                        user = new Fisioterapeuta(fisio.id_fis, fisio.img_fis, fisio.nome_fis, fisio.cel_fis, fisio.cpf_fis, fisio.rg_fis, fisio.email_fis, fisio.dados_fis, fisio.nasc_fis, fisio.adm_fis);
-                    }
-                    else
-                    {
-                        throw new Exception("Não implementado");
-                    }
-            
+                    user.Fisio = up.FisioterapeutaComCelularClasse(fis);
                 }
-
+                else
+                {
+                    user.Fisio = up.FisioterapeutaSemCelularClasse(fis);
+                }
+                
             }
             else if (tipo == "pac")
             {
-                user = new Paciente();
+                if (comCelular == true)
+                {
+                  user.pac = up.PacienteComCelularClasse(pac);
+                }
+                else
+                {
+                    user.pac = up.PacienteSemCelularClasse(pac);
+                }
             }
             else
             {
-                throw new Exception("Não encontrei nada aqui");
+                user = null;
             }
             return user;
         }

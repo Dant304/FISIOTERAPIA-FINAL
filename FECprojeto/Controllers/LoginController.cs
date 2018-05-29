@@ -1,46 +1,48 @@
 ﻿using CamadaDeNegocios.Negocios;
-using FECprojeto.Models.Classes.Abstrata;
 using FECprojeto.Models.Classes.Auxiliares;
+using FECprojeto.Models.Classes.Auxiliares.Classes_de_persistência;
 using FECprojeto.Models.Classes.Auxiliares.Design_Patterns.Factory;
-using FECprojeto.Models.Classes.Concretas;
-using FECprojeto.Models.Classes.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using FECprojeto.Models.Classes.Auxiliares.Sessão;
 using System.Web.Mvc;
 
 namespace FECprojeto.Controllers
 {
     public class LoginController : Controller
     {
-        bool comCelular = false;
+        
+        Usuarios NovoUsuario = new Usuarios();
         Paciente_Negocios bp = new Paciente_Negocios();
         Fisioterapeuta_Negocios bf = new Fisioterapeuta_Negocios();
-        Usuarios user = new Usuarios();
+     
         // GET: Login
+        //Redirecionamento para a tela de login, caso a sessão expire, caso contrário, permaneça logado.
         public ActionResult Index()
         {
             if (Session["UsuarioFisio"] != null)
             {
-                return RedirectToAction("IndexFisioterapeuta", "TelaInicial");
+                //Redirecionando para a tela do fisioterapeuta
+                return RedirectToAction("IndexFisioterapeuta", "Inicio");
             }
             else if (Session["UsuarioPac"] != null)
             {
-                return RedirectToAction("Index", "TelaInicial");
+                //Redirecionando para a tela do paciente
+                return RedirectToAction("IndexPaciente", "Inicio");
             }
             else
             {
-                return View();
+                //Tela de login
+                return View("TelaDanielLogin");
             }
         }
 
+        //Controller responsável por fazer a verificação do usuário através dos dados passados.
         [HttpPost]
         public ActionResult logar(string email, string password)
         {
+            //Indo as classes Paciente_Negocios e Fisioterapeuta_Negocios acionando o método para fazer login à procura do usuário.
             if (bp.fazerLogin(email, password) || bf.fazerLogin(email, password))
             {
-                //Caso sim, Abaixo será armazenado o Paciente ou o Fisioterapeuta caso seja encontrado, caso não, será null.
+                //Caso encontre, Abaixo será armazenado o Paciente ou o Fisioterapeuta caso seja encontrado, caso não, será null.
                 var UserPac = bp.ObterPorLogin(email, password);
                 var UserFisio = bf.ObterPorLogin(email, password);
                 //Verificando se foi armazenado algo em 'UserPac e no UserFisio'.
@@ -49,20 +51,20 @@ namespace FECprojeto.Controllers
                     //Verificando se a coluna 'cel_fis' está vazio.
                     if (UserFisio.cel_fis == null)
                     {
-                        //Instanciando a classe Fisioterapeuta através do construtor apropriado pela a verificação.
-                        Fisioterapeuta fis = new Fisioterapeuta(UserFisio.id_fis, UserFisio.img_fis, UserFisio.nome_fis, UserFisio.cpf_fis, UserFisio.rg_fis, UserFisio.senha_fis, UserFisio.email_fis, UserFisio.dados_fis, UserFisio.nasc_fis, UserFisio.adm_fis);
-                        Session["UsuarioFisio"] = fis;
-                        return RedirectToAction("Index", "Inicio");
-
+                      
+                        //Indo a classe Usuarios para obter um tipo de usuário para ser armazenado em fis.
+                        Fisioterapeuta_Paciente fis = NovoUsuario.ObterUsuario("fisio", false, UserFisio, null);
+                        //Armazenando os dados buscado na Sessão, que é identificado por 'UsuarioFisio'.
+                        Session["UsuarioFisio"] = fis.Fisio;
+                        //Redirecionando à tela 'IndexFisioterapeuta' do controller 'Inicio'.
+                        return RedirectToAction("IndexFisioterapeuta", "Inicio");
                     }
                     else
                     {
-                        //Caso a coluna 'cel_fis' esteja com algum valor, irá ser instânciado a classe Fisioterapeuta através do construtor apropriado pela a verificação.
-                        Usuarios user = new Usuarios();
-                        comCelular = true;
-                        Session["UsuarioFisio"] = user;
-                        user.ObterUsuario("fisio",comCelular,UserFisio,null);
-                        return RedirectToAction("Index", "Inicio",user);
+                        //Caso a coluna 'cel_fis' esteja com algum valor.
+                        Fisioterapeuta_Paciente fis = NovoUsuario.ObterUsuario("fisio", true, UserFisio, null);
+                        Session["UsuarioFisio"] = fis.Fisio;
+                        return RedirectToAction("IndexFisioterapeuta", "Inicio");
                     }
                 }
                 //Caso o 'UserPac' esteja com algum valor e o 'UserFisio' não.
@@ -71,30 +73,41 @@ namespace FECprojeto.Controllers
                     //Verificando se a coluna 'cel_pac' esteja sem valor.
                     if (UserPac.cel_pac == null)
                     {
-                        //Instanciando a classe Paciente através do construtor apropriado pela a verificação.
-                        Paciente pac = new Paciente(UserPac.id_pac, UserFisio.img_fis, UserPac.nome_pac, UserPac.tel_pac, UserPac.cpf_pac, UserPac.rg_pac, UserPac.senha_pac, UserPac.email_pac, UserPac.dados_pac, UserPac.nasc_pac);
-                        Session["UsuarioPac"] = pac;
-                        return RedirectToAction("Index", "Inicio");
+                        //Indo a classe Usuarios para obter um tipo de usuário para ser armazenado em pac.
+                        Fisioterapeuta_Paciente pac = NovoUsuario.ObterUsuario("pac", false, null, UserPac);
+                        //Armazenando os dados buscado na Sessão, que é identificado por 'UsuarioPac'.
+                        Session["UsuarioPac"] = pac.pac;
+                        //Redirecionando à tela 'IndexPaciente' do controller 'Inicio'.
+                        return RedirectToAction("IndexPaciente", "Inicio");
                     }
                     else
                     {
-                        //Caso a coluna 'cel_pac' esteja com algum valor, irá ser instânciado a classe Paciente através do construtor apropriado pela a verificação.
-                        Paciente pac = new Paciente(UserPac.id_pac, UserPac.img_pac, UserPac.nome_pac, UserPac.cel_pac, UserPac.tel_pac, UserPac.cpf_pac, UserPac.rg_pac, UserPac.senha_pac, UserPac.email_pac, UserPac.dados_pac, UserPac.nasc_pac);
-                        Session["UsuarioPac"] = pac;
-                        return RedirectToAction("Index", "Inicio");
+                        //Caso a coluna 'cel_pac' esteja com algum valor.
+                        Fisioterapeuta_Paciente pac = NovoUsuario.ObterUsuario("pac", true, null, UserPac);
+                        Session["UsuarioPac"] = pac.pac;
+                        return RedirectToAction("IndexPaciente", "Inicio");
                     }
                 }
-                //Redirecionando para a Action 'Index' do Controller 'TelaInicial'.
-
             }
-
             //Caso não seja encontrado o email e a senha passada.
 
             //Enviará para a View a mensagem abaixo.
             ViewBag.mensagem = "Usuário não cadastrado no sistema.";
 
-            //Retornando a ActionResult 'Index'.
-            return View("Index");
+            //Retornando a ActionResult 'Index' que é a tela de login.
+            return View("TelaDanielLogin");
         }
+
+  
+        //Controller responsável por descartar a sessão
+        public ActionResult sair()
+        {
+         
+            Session.Clear();
+            Session.Abandon();
+            return RedirectToAction("Index", "Login");
+        }
+
+       
     }
 }

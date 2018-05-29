@@ -1,5 +1,5 @@
 ﻿
-using CamadaDeDados.Banco.TabelasSQL;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +35,29 @@ namespace CamadaDeDados.Banco.Sql
             }
 
             return video;
+        }
+
+        public List<video> ListarVideos(int id)
+        {
+            if (id != 0)
+            {
+                return (from v in db.videos where v.id_fis == id select v).ToList();
+            }
+
+            return null;
+        }
+        public video PegarVideo(int id)
+        {
+            return (from v in db.videos where v.id_video == id select v).FirstOrDefault();
+        }
+        public void desativarVideo(int? id)
+        {
+            if (id != null)
+            {
+                bool desativar = false;
+                db.Database.ExecuteSqlCommand(@"update videos set ativo_video = {0} where id_video = {1}", desativar, id);
+            }
+
         }
     }
 }

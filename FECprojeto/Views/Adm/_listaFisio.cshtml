@@ -1,0 +1,93 @@
+﻿@model IEnumerable<CamadaDeDados.Banco.fisioterapeuta>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.img_fis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nome_fis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email_fis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.senha_fis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dados_fis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cel_fis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cpf_fis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.rg_fis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nasc_fis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ativo_fis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.adm_fis)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.sexo_fis)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.img_fis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nome_fis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email_fis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.senha_fis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dados_fis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cel_fis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cpf_fis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.rg_fis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nasc_fis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ativo_fis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.adm_fis)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.sexo_fis)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id_fis }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id_fis }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id_fis })
+        </td>
+    </tr>
+}
+
+</table>

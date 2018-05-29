@@ -1,21 +1,18 @@
 ﻿using CamadaDeNegocios.Negocios;
 using FECprojeto.Models.Classes.Abstrata;
-using FECprojeto.Models.Classes.Interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Drawing;
 
 namespace FECprojeto.Models.Classes.Concretas
 {
     /*Classe filha : Classe Pai*/
-    public class Paciente : Pessoa,IUsuarios
+    public class Paciente : Pessoa
     {
 
         /*Propriedades da classe*/
 
       
-        public byte[] img_pac { get; set; }
+        public Image img_pac { get; set; }
         public string senha_pac { get; set; }
         public string dados_pac { get; set; }
         public string telResidencial { get; set; }
@@ -27,7 +24,7 @@ namespace FECprojeto.Models.Classes.Concretas
         {
 
         }
-        public Paciente(int id, byte[] img_pac, string nome, string tel_pac, string telCelular, string cpf, string rg, string email, string senha, String dadosPac, DateTime dataDeAniversario)
+        public Paciente(int id, Image img_pac, string nome, string tel_pac, string telCelular, string cpf, string rg, string email, string senha, String dadosPac, DateTime dataDeAniversario)
         {
             SetIdPessoa(id);
             this.img_pac = img_pac;
@@ -41,7 +38,7 @@ namespace FECprojeto.Models.Classes.Concretas
             this.dados_pac = dadosPac;
             this.dataDeAniversario = dataDeAniversario;
         }
-        public Paciente(int id, byte[] img_pac, string nome, string telResidencial, string cpf, string rg, string senha, string email, String dadosPac, DateTime dataDeAniversario)
+        public Paciente(int id, Image img_pac, string nome, string telResidencial, string cpf, string rg, string senha, string email, String dadosPac, DateTime dataDeAniversario)
         {
            SetIdPessoa(id);
             this.img_pac = img_pac;

@@ -1,0 +1,42 @@
+﻿ 
+@{
+
+}
+<style>
+    .table {
+        width: 20px;
+    }
+
+    #div {
+        margin-top: 300px;
+    }
+</style>
+<script>
+    function p1() {
+        var s = $("#pesquisa").val();
+    $.getJSON("@Url.Action("listarFisio","Inicio")?nome=" + s,
+        null, function (data) {
+            var body = '';
+            for (var i = 0; i < data.length; i++) {
+                body += '<tr><td>' + data[i].nome + '</td></tr>';
+            }
+            alert(body);
+            $('#table').html(body);
+        });
+    }
+
+</script>
+<script src="~/Scripts/Inicio/ListarProfissionais.js"></script>
+<input type="search" id="pesquisa" name="nome" placeholder="Pesquisar nome/identificação" />
+<button onclick="p1();" type="submit"><i class="fa fa-search"></i>Pesquisar</button>
+<table class="table table-dark" border="1" width="500">
+<thead>
+    <tr>
+        <th>Nome</th>
+    </tr>
+</thead>
+    <tbody id="table">
+
+    </tbody>
+
+</table>

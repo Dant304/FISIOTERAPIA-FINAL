@@ -1,4 +1,4 @@
-namespace CamadaDeDados.Banco.TabelasSQL
+namespace CamadaDeDados.Banco
 {
     using System;
     using System.Collections.Generic;
@@ -12,7 +12,6 @@ namespace CamadaDeDados.Banco.TabelasSQL
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public clinica()
         {
-            estadoes = new HashSet<estado>();
             fisioterapeutas = new HashSet<fisioterapeuta>();
         }
 
@@ -41,8 +40,9 @@ namespace CamadaDeDados.Banco.TabelasSQL
 
         public bool ativo_cli { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<estado> estadoes { get; set; }
+        public int id_pais { get; set; }
+
+        public virtual pai pai { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<fisioterapeuta> fisioterapeutas { get; set; }

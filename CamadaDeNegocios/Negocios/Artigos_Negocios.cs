@@ -1,6 +1,6 @@
 ﻿using CamadaDeDados.Banco;
 using CamadaDeDados.Banco.Sql;
-using CamadaDeDados.Banco.TabelasSQL;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +20,22 @@ namespace CamadaDeNegocios.Negocios
 
             DadosArtigo da = new DadosArtigo();
             da.SalvarArtigo(a);
+        }
+
+        public artigo umArtigo(int id)
+        {
+            DadosArtigo dart = new DadosArtigo();
+            return dart.PegarArtigo(id);
+        }
+
+        public void eliminarArt(int? id)
+        {
+            if(id != 0)
+            {
+                DadosArtigo dart = new DadosArtigo();
+                dart.DesativarArtigo(id);
+                
+            }
         }
     }
 }

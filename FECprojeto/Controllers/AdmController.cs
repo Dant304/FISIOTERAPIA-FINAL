@@ -1,7 +1,6 @@
 ﻿using FECprojeto.Models.Classes.Concretas;
 using System;
 using System.Web.Mvc;
-using CamadaDeDados.Banco.Sql;
 
 namespace FECprojeto.Controllers
 {
@@ -12,6 +11,11 @@ namespace FECprojeto.Controllers
         public ActionResult Index()
         {
             return View();
+        }
+
+        public PartialViewResult _listaFisio()
+        {
+            return PartialView();
         }
 
         [HttpPost]

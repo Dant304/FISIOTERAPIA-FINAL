@@ -1,4 +1,4 @@
-namespace CamadaDeDados.Banco.TabelasSQL
+namespace CamadaDeDados.Banco
 {
     using System;
     using System.Data.Entity;
@@ -21,14 +21,13 @@ namespace CamadaDeDados.Banco.TabelasSQL
         public virtual DbSet<paciente> pacientes { get; set; }
         public virtual DbSet<pai> pais { get; set; }
         public virtual DbSet<video> videos { get; set; }
-        public virtual DbSet<estado> estadoes { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<artigo>()
                 .Property(e => e.titulo_artDic)
                 .IsUnicode(false);
-
+           
             modelBuilder.Entity<artigo>()
                 .Property(e => e.conteudo_artDic)
                 .IsUnicode(false);
@@ -66,11 +65,6 @@ namespace CamadaDeDados.Banco.TabelasSQL
             modelBuilder.Entity<clinica>()
                 .Property(e => e.cnpj_cli)
                 .IsUnicode(false);
-
-            modelBuilder.Entity<clinica>()
-                .HasMany(e => e.estadoes)
-                .WithRequired(e => e.clinica)
-                .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<clinica>()
                 .HasMany(e => e.fisioterapeutas)
@@ -182,7 +176,11 @@ namespace CamadaDeDados.Banco.TabelasSQL
                 .IsUnicode(false);
 
             modelBuilder.Entity<pai>()
-                .HasMany(e => e.estadoes)
+                .Property(e => e.estado)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<pai>()
+                .HasMany(e => e.clinicas)
                 .WithRequired(e => e.pai)
                 .WillCascadeOnDelete(false);
 
@@ -191,15 +189,11 @@ namespace CamadaDeDados.Banco.TabelasSQL
                 .IsUnicode(false);
 
             modelBuilder.Entity<video>()
+                .Property(e => e.url_video)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<video>()
                 .Property(e => e.descricao_video)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<estado>()
-                .Property(e => e.nome_state)
-                .IsUnicode(false);
-
-            modelBuilder.Entity<estado>()
-                .Property(e => e.sigla_state)
                 .IsUnicode(false);
         }
     }

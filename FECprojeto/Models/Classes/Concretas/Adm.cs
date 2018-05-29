@@ -1,5 +1,5 @@
 ﻿using CamadaDeDados.Banco;
-using CamadaDeDados.Banco.TabelasSQL;
+
 using CamadaDeNegocios.Negocios;
 using FECprojeto.Models.Classes.Abstrata;
 using System;
@@ -12,7 +12,8 @@ namespace FECprojeto.Models.Classes.Concretas
     public class Adm : Pessoa
     {
         /*Propriedades da classe*/
-
+        Fisioterapeuta_Negocios fn = new Fisioterapeuta_Negocios();
+        Paciente_Negocios pn = new Paciente_Negocios();
         private int idAdm { get; set; }
         /*-------------------------------------------------------------------------------------------------------------------------------*/
         /*Construtor da classe*/
@@ -120,5 +121,6 @@ namespace FECprojeto.Models.Classes.Concretas
                 bf.Desativar(bdf);
             }
         }
+    
     }
 }

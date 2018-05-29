@@ -1,13 +1,14 @@
 ﻿@model FECprojeto.Models.Classes.Concretas.Artigos
 @{
     ViewBag.Title = "ViewTeste";
-    Layout = null;
+    
 }
+<form id="formArtigos">
+    <label>Código: @Model.idArtigo</label>
 
-<label>Código: @Model.idArtigo</label>
+    <h2>@Model.tituloArtigo</h2>
 
-<h2>@Model.tituloArtigo</h2>
+    <p>@Model.corpoArtigo</p>
 
-<p>@Model.corpoArtigo</p>
-
-<h5>@Model.dataArtigo</h5>
+    <h5>@Model.dataArtigo</h5>
+</form>

@@ -1,6 +1,5 @@
 ﻿using CamadaDeDados.Banco;
 using CamadaDeDados.Banco.Sql;
-using CamadaDeDados.Banco.TabelasSQL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +11,8 @@ namespace CamadaDeNegocios.Negocios
     public class Paciente_Negocios
     {
         DadosPaciente dp = new DadosPaciente();
-
+        DadosArtigo da = new DadosArtigo();
+        DadosVideo dv = new DadosVideo();
         public void SalvarPaciente(paciente paciente)
         {
             if (paciente != null)
@@ -34,13 +34,25 @@ namespace CamadaDeNegocios.Negocios
 
             if (string.IsNullOrEmpty(email) && string.IsNullOrEmpty(senha))
             {
-                throw new Exception("Email e Senha Vazios");
+                return false;
             }
             return dp.ProcurarPorUsuario(email, senha);
         }
         public paciente ObterPorLogin(string email, string senha)
         {
             return dp.ObterPorLogin(email, senha);
+        }
+        public List<artigo> ObterArtigosPac(int id)
+        {
+            return da.ObterTodosArtigos(id);
+        }
+        public List<video> ObterVideosPac(int id)
+        {
+            return dv.ListarVideos(id);
+        }
+        public List<paciente> ObterPacientes()
+        {
+            return dp.ObterTodosPacientes();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿
 
-using CamadaDeDados.Banco.TabelasSQL;
+
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -51,6 +51,8 @@ namespace CamadaDeDados.Banco.Sql
         {
             return (from f in db.fisioterapeutas where f.id_fis == id select f).FirstOrDefault();
         }
+
+       
         /*Método para buscar o id através do email*/
         public int ObterID(string email)
         {
@@ -89,7 +91,15 @@ namespace CamadaDeDados.Banco.Sql
 
         }
         //Método para obter uma lista de fisioterapeutas.
-        public List<fisioterapeuta> ObterTodosFisioterapeutas()
+        public List<fisioterapeuta> ObterUmFisioterapeutas(string nome)
+        {
+            return (from f in db.fisioterapeutas where f.nome_fis.Contains(nome) orderby f.nome_fis select f).ToList();
+        }
+        public List<fisioterapeuta> ObterFisioterapeuta(string nome)
+        {
+            return (from f in db.fisioterapeutas where f.nome_fis.StartsWith(nome) && f.ativo_fis == true select f).ToList();
+        }
+        public List<fisioterapeuta> ObterTodosSem()
         {
             return (from f in db.fisioterapeutas select f).ToList();
         }
@@ -114,6 +124,12 @@ namespace CamadaDeDados.Banco.Sql
         public fisioterapeuta ObterPorLogin(string email, string senha)
         {
             return (from f in db.fisioterapeutas where f.email_fis == email && f.senha_fis == senha select f).FirstOrDefault();
+        }
+
+        public void AlterarSenha(string email,string senhaNova)
+        {
+           int id = ObterID(email);
+            db.Database.ExecuteSqlCommand(@"update fisioterapeuta set senha_fis = {0} where id_fis = {1}",senhaNova,id);
         }
 
        /* EM MANUNTENÇÃO!!! private byte ConverterImagem(byte[] img)

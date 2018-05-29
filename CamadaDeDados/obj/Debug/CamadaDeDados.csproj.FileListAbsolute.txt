@@ -32,3 +32,5 @@ C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-ma
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeDados\bin\Debug\EntityFramework.xml
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeDados\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeDados\obj\Debug\CamadaDeDados.csproj.CopyComplete
+C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeDados\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeDados\bin\Debug\Newtonsoft.Json.xml

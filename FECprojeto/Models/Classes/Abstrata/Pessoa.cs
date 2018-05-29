@@ -7,7 +7,7 @@ namespace FECprojeto.Models.Classes.Abstrata
 {
     public abstract class Pessoa
     {
-        private int Id_Pessoa { get; set; }
+        private int Id_Pessoa { get; set; } 
         public string nome { get; set; }
         public string telCelular { get; set; }
         public bool sexo { get; set; }
