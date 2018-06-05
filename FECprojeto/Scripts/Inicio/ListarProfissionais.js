@@ -1,10 +1,4 @@
-﻿$(document).ready(function () {
-  
-} );
-   
-
-
-
+﻿
   function listarFis() {
       $('#table').empty();
       var search = $('#pesquisa').val();

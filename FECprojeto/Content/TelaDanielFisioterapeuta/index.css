@@ -13,9 +13,7 @@
     display: flex;
     flex-wrap: wrap;
   }
-  input{
-   
-  }
+
   input:hover{
       box-shadow: 5px 10px hsl(238, 90%, 85%);
   }
@@ -27,7 +25,7 @@
   left: 48%;
       position: absolute;
     color: rgb(103, 103, 182);
-    bottom: 0px;
+  
   }
 body {
     background-image: url("/imagens/logo.png");

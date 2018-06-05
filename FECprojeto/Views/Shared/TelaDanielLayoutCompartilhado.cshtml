@@ -1,69 +1,28 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <script src="~/Scripts/TelaDanielFisioterapeuta/inicial.js"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE-edge" charset="utf-8">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    @Scripts.Render("~/bundles/jquery", "~/JS/TelaDanielFisioterapeuta", "~/JS/Inicio")
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    @Styles.Render("~/Content/css", "~/CSS/TelaDanielFisioterapeuta", "~/CSS/TelaProfissional", "~/CSS/Inicio")
     <title>Fisioterapia em casa</title>
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/Content/TelaDanielFisioterapeuta/style.css" rel="stylesheet" />
-    <link href="~/Content/TelaDanielFisioterapeuta/index.css" rel="stylesheet" />
-    <link href="~/Content/TelaDanielFisioterapeuta/inicial.css" rel="stylesheet" />
-    <link href="~/Content/TelaProfissional/index.css" rel="stylesheet" />
-    <link href="~/Content/TelaDanielFisioterapeuta/inicial.css" rel="stylesheet" />
-    <link href="~/Content/TelaProfissional/style.css" rel="stylesheet" />
-    <link href="~/Content/TelaDanielFisioterapeuta/adm.css" rel="stylesheet" />
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/scripts/inicio/config.js"></script>
-    <link href="~/content/inicio/config.css" rel="stylesheet" />
-    <script src="~/Scripts/TelaDanielFisioterapeuta/inicial.js"></script>
-    <script src="~/Scripts/Inicio/ListarProfissionais.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
+
 
     <!-- Estava pondo um relógio que mostrasse o tempo da sessão do usuário-->
-    <style>
-        #all {
-            position: center;
-            margin: 0 auto;
-            background-color: black;
-        }
-
-
-
-        #submenu, #submenu2 {
-            border: solid;
-            border-width: 2px;
-            border-radius: 5px;
-            color: white;
-            background-color: black;
-            display: none;
-            margin: 0 5px;
-            list-style-type: none;
-            text-align: center;
-        }
-
-        hr {
-            margin: 1%;
-        }
-
-        #submenu > li, #submenu2 > li {
-            padding: 6px 10px;
-        }
-
-        li:hover, li:hover {
-            background-color: white;
-            color: dodgerblue;
-            box-shadow: 1px 1px 30px 1px blue;
-            border-radius: 5px;
-        }
-    </style>
 </head>
 
 <body>
 
     <nav id="btns">
         <div class="grid">
-            <div onclick="Inicio();">
+            <div id="perfil" onclick="Inicio();">
                 @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.imagemUsuario == null)
                 {
                     <img src="@FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.imagemNull" alt="perfil" />
@@ -74,49 +33,66 @@
                 }
 
             </div>
-            <div id="videosBtn" onCLick="videoSourcePage()">Videos</div>
-            <div id="artigosBtn" onClick="artigosSource()">Artigos</div>
-            <div id="profissionaisBtn">
-                Buscar
+            <div id="videosBtn" onCLick="videoSourcePage()" title="Ir a lista de videos">Videos</div>
+            <div id="artigosBtn" onClick="artigosSource()" title="Ir a lista de artigos">Artigos</div>
+            @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario == "fis")
+            {
 
-                @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario == "pac")
+                if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.Adm == true)
                 {
-                    <ul id="submenu">
-                        <li onClick="profissionalSource();">Fisioterapeutas</li>
-                    </ul>
+                    <div id="profissionaisBtn">
+                        Buscar
+                        <ul id="submenu">
+                            <li onClick="profissionalSource();" title="Ir a lista de fisioterapeutas">Fisioterapeutas</li>
+                            <li title="Ir a lista de pacientes">Pacientes</li>
+                        </ul>
+                    </div>
                 }
                 else
                 {
-                    <ul id="submenu">
-                        <li onClick="profissionalSource();">Fisioterapeutas</li>
-                        
-                        <li>Pacientes</li>
-                    </ul>
+                    <div id="profissionaisBtn">
+                        Buscar
+                        <ul id="submenu">
+                            <li title="Ir a lista de pacientes">Pacientes</li>
+                        </ul>
+                    </div>
                 }
+            }
 
 
 
-            </div>
 
             @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.Adm == true)
             {
-                <div id="admBtn" onclick="modal();">
+                <div id="admBtn">
                     Cadastrar  <ul id="submenu2">
-                        <li>Fisioterapeutas</li>
-                       
-                        <li>Pacientes</li>
+                        <li id="fis" onclick="changeTitle(1);" data-target="#myModal" data-toggle="modal" title="Cadastrar um fisioterapeuta">Fisioterapeutas</li>
+
+                        <li id="pac" onclick="changeTitle(2);" data-target="#myModal" data-toggle="modal" title="Cadastrar um paciente">Pacientes</li>
                     </ul>
                 </div>
             }
-            <div id="configBtn" onClick="config()">Configurações</div>
-
-            <div style="background-color:red;width:130px;margin-left:5%;" id="sairBtn" onClick="sair()">Sair</div>
+            <div id="configBtn" onClick="config()" title="Ir ás configurações">Configurações</div>
+            <div style="background-color:red;width:110px;" id="sairBtn" onClick="sair()">Sair</div>
         </div>
-     
+
     </nav>
+    <h1 id="hora"></h1>
     @RenderBody()
     <div id="partial">
     </div>
+
+
+    <!---->
+    @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario == "fis" && FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.Adm == true)
+    {
+        <div id="modal"></div>
+    }
+    <!---->
+    <div style="float:right;margin-top:37%;margin-right:1%;" title="Header" data-toggle="popover" data-placement="left" data-content="Content" id="chat">
+        <img style="border:black 1px solid;box-shadow:white 1px 1px 20px 1px;float:right" src="~/imagens/homem.png" width="40" height="100" />
+    </div>
+   
 
 </body>
 </html>

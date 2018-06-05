@@ -2,6 +2,13 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
   }
+
+li:hover, li:hover {
+    background-color: white;
+    color: dodgerblue;
+    box-shadow: 1px 1px 30px 1px blue;
+    border-radius: 5px;
+}
 nav{
     background-color:royalblue;
     height:50px;

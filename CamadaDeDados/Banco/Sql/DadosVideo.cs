@@ -37,11 +37,19 @@ namespace CamadaDeDados.Banco.Sql
             return video;
         }
 
-        public List<video> ListarVideos(int id)
+        public List<video> ListarVideos(int id, string search)
         {
             if (id != 0)
             {
-                return (from v in db.videos where v.id_fis == id select v).ToList();
+                if (search == null || search == "")
+                {
+                    return (from v in db.videos where v.id_fis == id orderby v.id_video ascending select v).ToList();
+                }
+                else if (search != null || search != "")
+                {
+                    return (from v in db.videos where v.titulo_video.Contains(search) orderby v.titulo_video select v).ToList();
+                }
+
             }
 
             return null;

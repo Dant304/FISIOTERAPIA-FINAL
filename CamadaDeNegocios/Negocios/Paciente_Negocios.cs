@@ -48,7 +48,7 @@ namespace CamadaDeNegocios.Negocios
         }
         public List<video> ObterVideosPac(int id)
         {
-            return dv.ListarVideos(id);
+            return dv.ListarVideos(id,null);
         }
         public List<paciente> ObterPacientes()
         {

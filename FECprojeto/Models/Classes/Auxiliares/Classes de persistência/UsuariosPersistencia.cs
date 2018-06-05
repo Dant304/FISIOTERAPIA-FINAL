@@ -17,7 +17,7 @@ namespace FECprojeto.Models.Classes.Auxiliares.Classes_de_persistência
           
             Sessão.SessaoSistema.tipoUsuario = "fis";
             Fisioterapeuta fis = new Fisioterapeuta(f.id_fis,null,f.nome_fis,f.cel_fis,f.cpf_fis,f.rg_fis,f.email_fis,f.senha_fis,f.dados_fis,f.nasc_fis,f.adm_fis);
-
+            Sessão.SessaoSistema.nome = f.nome_fis;
             if (f.adm_fis == false)
             {
                 Sessão.SessaoSistema.Adm = false;
@@ -45,6 +45,7 @@ namespace FECprojeto.Models.Classes.Auxiliares.Classes_de_persistência
         }
         public Fisioterapeuta FisioterapeutaSemCelularClasse(fisioterapeuta f)
         {
+            Sessão.SessaoSistema.nome = f.nome_fis;
             Sessão.SessaoSistema.userID = f.id_fis;
             
             Sessão.SessaoSistema.tipoUsuario = "fis";
@@ -76,6 +77,7 @@ namespace FECprojeto.Models.Classes.Auxiliares.Classes_de_persistência
 
         public Paciente PacienteComCelularClasse(paciente p)
         {
+            Sessão.SessaoSistema.nome = p.nome_pac;
             Sessão.SessaoSistema.userID = p.id_pac;
             Sessão.SessaoSistema.tipoUsuario = "pac";
             Paciente pac = new Paciente(p.id_pac, null, p.nome_pac, p.tel_pac, p.cel_pac, p.cpf_pac, p.rg_pac, p.email_pac, p.senha_pac, p.dados_pac, p.nasc_pac);
@@ -97,6 +99,7 @@ namespace FECprojeto.Models.Classes.Auxiliares.Classes_de_persistência
         }
         public Paciente PacienteSemCelularClasse(paciente p)
         {
+            Sessão.SessaoSistema.nome = p.nome_pac;
             Sessão.SessaoSistema.userID = p.id_pac;
             Sessão.SessaoSistema.tipoUsuario = "pac";
             Paciente pac = new Paciente(p.id_pac, null, p.nome_pac, p.tel_pac, p.cpf_pac, p.rg_pac, p.senha_pac, p.email_pac, p.dados_pac, p.nasc_pac);

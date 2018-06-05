@@ -2,7 +2,7 @@
     margin: 0 auto;
   }
   hr{
-    height: 5px;
+    height: 2px;
     background-color: blue;
     border-radius: 10px;
   }
@@ -30,11 +30,11 @@
   }
   h3 {
     display: inline;
-    float: left;
+
     font-size: 1.3em;
     border-radius: 10px;
     margin-right: 50px;
-    margin-top: 5px;
+
   }
   select{
     margin-top: 10px;

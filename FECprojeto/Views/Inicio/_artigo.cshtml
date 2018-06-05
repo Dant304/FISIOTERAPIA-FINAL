@@ -11,9 +11,11 @@
         box-shadow: blue 1px 1px 20px 1px;
         cursor: pointer;
     }
-    #link:hover>td{
-        color:dodgerblue;
-    }
+
+        #link:hover > td {
+            color: dodgerblue;
+        }
+
     h2:hover {
         background-color: white;
         box-shadow: 1px 1px 20px 1px blue;
@@ -45,7 +47,7 @@
     {
 
         <tr id="link" onclick="artigoDetalhes(@item.id_artDic);">
-            <td >
+            <td>
                 @Html.DisplayFor(modelItem => item.titulo_artDic)
             </td>
             <td>
@@ -66,8 +68,14 @@
 
 </table>
 <h1 style="text-align:center;">@ViewBag.mensagem</h1>
-@if(ViewBag.mensagem != null)
+@if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario == "fis" && ViewBag.mensagem != null)
 {
-<h2 style="text-align:center;cursor:pointer;">Deseja publicar um artigo?</h2>
+    <div id="mais">
+        <h6 style="color:white">Postar mais video?</h6>
+    </div>
+}
+@if (ViewBag.mensagem != null && FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario != "pac")
+{
+    <h2 style="text-align:center;cursor:pointer;">Deseja publicar um artigo?</h2>
 }
 

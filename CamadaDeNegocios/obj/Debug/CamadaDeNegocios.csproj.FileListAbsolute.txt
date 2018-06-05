@@ -42,3 +42,20 @@ C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-ma
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeNegocios\obj\Debug\CamadaDeNegocios.pdb
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeNegocios\bin\Debug\Newtonsoft.Json.dll
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeNegocios\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\bin\Debug\CamadaDeNegocios.dll.config
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\bin\Debug\CamadaDeNegocios.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\bin\Debug\CamadaDeNegocios.pdb
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\bin\Debug\CamadaDeDados.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\bin\Debug\EntityFramework.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\bin\Debug\CamadaDeDados.pdb
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\bin\Debug\CamadaDeDados.dll.config
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\bin\Debug\EntityFramework.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\obj\Debug\CamadaDeNegocios.csprojResolveAssemblyReference.cache
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\obj\Debug\CamadaDeNegocios.csproj.CoreCompileInputs.cache
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\obj\Debug\CamadaDeNegocios.csproj.CopyComplete
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\obj\Debug\CamadaDeNegocios.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeNegocios\obj\Debug\CamadaDeNegocios.pdb

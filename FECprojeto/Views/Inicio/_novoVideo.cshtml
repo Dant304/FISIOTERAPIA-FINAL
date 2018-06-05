@@ -1,0 +1,105 @@
+﻿@{
+    Layout = null;
+}
+
+<script>
+    $('#enviar').click(function () {
+        var titulo = document.getElementById("titulo").value, url = document.getElementById("url").value, text = document.getElementById("text").value;
+        $.ajax({
+            type: 'GET',
+            url: '../Inicio/CadastrarVideo',
+            data: { titulo: titulo, url: url, text: text },
+            beforeSend: function () {
+                $('#dialog').css({ "color": "blue" });
+                document.getElementById("dialog").innerHTML = "Enviando...";
+            }
+        }).done(function (data) {
+
+            $('#dialog').css({ "color": "green" });
+            document.getElementById("dialog").innerHTML = "Enviado com sucesso!";
+            $.ajax({
+                url: '../Inicio/_videos',
+                async: true
+            }).done(function (data) {
+                $(function () {
+                   
+                }).fail(function () {
+                    $('#dialog').css({ "color": "red" });
+                    document.getElementById("dialog").innerHTML = "Falha ao enviar";
+                });
+            });
+        });
+    });
+            
+   
+    
+ 
+</script>
+<meta http-equiv="refresh" content="1000,../Inicio/_videos"/>
+
+<p id="dialog">Status...</p>
+@using(Html.BeginForm("CadastrarVideo", "Inicio",FormMethod.Post,new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+<div class="form-horizontal">
+
+    <hr />
+    <div class="form-group">
+        <h5>Categoria:</h5>
+        <div class="col-md-10">
+            <select>
+                <option>?</option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <h5>Titulo do video:</h5>
+        <div class="col-md-10">
+            <input id="titulo" name="titulo" type="text" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h5>Thumbnail do video:</h5>
+        <div class="col-md-10">
+            <input type="file" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h5>Insira o embed code do video:</h5>
+        <div class="col-md-10">
+            <input id="url" name="url" type="text" />
+        </div>
+    </div>
+
+    <div class="form-group">
+        <h5>Descricao do video:</h5>
+        <div class="col-md-10">
+            <textarea id="text" name="text"></textarea>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input id="enviar" type="submit" value="Enviar" class="btn btn-success" />
+        </div>
+    </div>
+</div>
+}
+
+
+
+
+
+

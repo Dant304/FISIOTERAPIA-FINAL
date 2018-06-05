@@ -189,3 +189,198 @@ C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-ma
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\obj\Debug\FECprojeto.csproj.CopyComplete
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\obj\Debug\FECprojeto.dll
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\obj\Debug\FECprojeto.pdb
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\ApplicationInsights.config
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\roslyn\csc.exe
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\roslyn\vbc.exe
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\roslyn\VBCSCompiler.exe
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\FECprojeto.dll.config
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\FECprojeto.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\FECprojeto.pdb
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Antlr3.Runtime.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\CamadaDeDados.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\CamadaDeNegocios.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\EntityFramework.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\EntityFramework.SqlServer.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.AI.Web.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Newtonsoft.Json.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\System.Web.Helpers.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\System.Web.Mvc.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\System.Web.Optimization.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\System.Web.Razor.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\System.Web.WebPages.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\System.Web.WebPages.Razor.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\WebGrease.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\CamadaDeDados.pdb
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\CamadaDeDados.dll.config
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\CamadaDeNegocios.pdb
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\CamadaDeNegocios.dll.config
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\EntityFramework.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\EntityFramework.SqlServer.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.AI.Web.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Newtonsoft.Json.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\System.Web.Helpers.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\System.Web.Mvc.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\System.Web.Optimization.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\System.Web.Razor.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\System.Web.WebPages.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\System.Web.WebPages.Razor.xml
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\bin\Antlr3.Runtime.pdb
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\obj\Debug\FECprojeto.csprojResolveAssemblyReference.cache
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\obj\Debug\FECprojeto.csproj.CoreCompileInputs.cache
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\obj\Debug\FECprojeto.csproj.CopyComplete
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\obj\Debug\FECprojeto.dll
+C:\Users\dan00\Desktop\PROJETO-UNASP-FISIOTERAPIA-master\FECprojeto\obj\Debug\FECprojeto.pdb
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\ApplicationInsights.config
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\roslyn\csc.exe
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\roslyn\vbc.exe
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\roslyn\VBCSCompiler.exe
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\FECprojeto.dll.config
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\FECprojeto.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\FECprojeto.pdb
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Antlr3.Runtime.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\CamadaDeDados.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\CamadaDeNegocios.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\EntityFramework.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\EntityFramework.SqlServer.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.AI.Web.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Newtonsoft.Json.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\System.Web.Helpers.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\System.Web.Mvc.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\System.Web.Optimization.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\System.Web.Razor.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\System.Web.WebPages.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\System.Web.WebPages.Razor.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\WebGrease.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\CamadaDeDados.pdb
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\CamadaDeDados.dll.config
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\CamadaDeNegocios.pdb
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\CamadaDeNegocios.dll.config
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\EntityFramework.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\EntityFramework.SqlServer.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.AI.Web.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Newtonsoft.Json.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\System.Web.Helpers.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\System.Web.Mvc.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\System.Web.Optimization.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\System.Web.Razor.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\System.Web.WebPages.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\System.Web.WebPages.Razor.xml
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\bin\Antlr3.Runtime.pdb
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\obj\Debug\FECprojeto.csprojResolveAssemblyReference.cache
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\obj\Debug\FECprojeto.csproj.CoreCompileInputs.cache
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\obj\Debug\FECprojeto.csproj.CopyComplete
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\obj\Debug\FECprojeto.dll
+C:\Users\dan00\Desktop\Projeto versão final\FECprojeto\obj\Debug\FECprojeto.pdb
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\ApplicationInsights.config
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\roslyn\csc.exe
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\roslyn\vbc.exe
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\roslyn\VBCSCompiler.exe
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\FECprojeto.dll.config
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\FECprojeto.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\FECprojeto.pdb
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Antlr3.Runtime.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\CamadaDeDados.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\CamadaDeNegocios.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\EntityFramework.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\EntityFramework.SqlServer.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.AI.Web.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.ApplicationInsights.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Newtonsoft.Json.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\System.Web.Helpers.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\System.Web.Mvc.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\System.Web.Optimization.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\System.Web.Razor.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\System.Web.WebPages.Deployment.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\System.Web.WebPages.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\System.Web.WebPages.Razor.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\WebGrease.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\CamadaDeDados.pdb
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\CamadaDeDados.dll.config
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\CamadaDeNegocios.pdb
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\CamadaDeNegocios.dll.config
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\EntityFramework.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\EntityFramework.SqlServer.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.AI.Web.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.ApplicationInsights.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Newtonsoft.Json.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\System.Web.Helpers.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\System.Web.Mvc.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\System.Web.Optimization.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\System.Web.Razor.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\System.Web.WebPages.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\System.Web.WebPages.Deployment.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\System.Web.WebPages.Razor.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\bin\Antlr3.Runtime.pdb
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\obj\Debug\FECprojeto.csprojResolveAssemblyReference.cache
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\obj\Debug\FECprojeto.csproj.CoreCompileInputs.cache
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\obj\Debug\FECprojeto.csproj.CopyComplete
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\obj\Debug\FECprojeto.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\FECprojeto\obj\Debug\FECprojeto.pdb

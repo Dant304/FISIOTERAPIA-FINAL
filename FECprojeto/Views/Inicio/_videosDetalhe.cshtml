@@ -1,26 +1,24 @@
 ﻿@model CamadaDeDados.Banco.video
-<style>
-    #player {
-    text-align:center;
-
-    }
-    #player > h2{
-       background-color:white;
-       border:solid;
-       border-width:1px;
-       border-color:black;
-       color:black;
-      
-    }
-    iframe{
-        margin-left: 50px;
-      
-    }
-</style>
 @{ Layout = null;}
+<script>
+    $(document).ready(function () {
+        $('#_videosDet').show(1);
+        
+    });
+     
+</script>
 
 
-<div id="player">
-    <h2 id="title">@Model.titulo_video</h2>
-    <iframe  width="630" height="320" src="@Model.descricao_video" frameborder="1" allow="autoplay"  allowfullscreen></iframe>
+<div id="_videosDet" style="text-align:center;"> 
+    <figure>
+        <h1>@Model.titulo_video</h1>
+        <iframe style="box-shadow:black 1px 1px 20px 1px;" id="iframeV" width="560" height="315" src="@Model.url_video" frameborder="1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <p style="text-align:center;font-size:medium;">Descrição do vídeo:</p>
+        <figcaption style="background-color:white;border:solid 1px black;box-shadow:black 2px 2px 20px 2px;width:50%">
+            <p style="font:bold;hyphens:auto;">@Model.descricao_video</p>
+        </figcaption> 
+        <h6>Postado por: @Model.fisioterapeuta.nome_fis - @Model.data_video</h6>
+    </figure>
 </div>
+
+

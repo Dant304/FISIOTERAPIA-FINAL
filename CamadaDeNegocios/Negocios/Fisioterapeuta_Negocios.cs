@@ -14,6 +14,11 @@ namespace CamadaDeNegocios.Negocios
         DadosFisioterapeuta df = new DadosFisioterapeuta();
         DadosArtigo da = new DadosArtigo();
         DadosVideo dv = new DadosVideo();
+        public string MensagemDeErro()
+        {
+            Exception e = new Exception();
+            return e.ToString();
+        }
         public void SalvarFisioterapeuta(fisioterapeuta fisioterapeuta)
         {
             if (fisioterapeuta != null)
@@ -32,7 +37,8 @@ namespace CamadaDeNegocios.Negocios
             DadosFisioterapeuta df = new DadosFisioterapeuta();
             if (fisioterapeuta == null)
             {
-                throw new Exception("Fisioterapeuta não encontrado");
+
+                throw new Exception();
             }
             df.Desativar(fisioterapeuta.id_fis);
         }
@@ -41,7 +47,7 @@ namespace CamadaDeNegocios.Negocios
             DadosFisioterapeuta df = new DadosFisioterapeuta();
             if (string.IsNullOrEmpty(email) && string.IsNullOrEmpty(senha))
             {
-                throw new Exception("Email e Senha Vazios");
+                MensagemDeErro();
             }
             return df.ProcurarPorUsuario(email, senha);
         }
@@ -74,7 +80,7 @@ namespace CamadaDeNegocios.Negocios
         }
         public List<video> TodosOsVideos(int id)
         {
-            return dv.ListarVideos(id);
+            return dv.ListarVideos(id,null);
         }
         public List<fisioterapeuta> pesquisarFisio(string nome)
         {
@@ -83,6 +89,11 @@ namespace CamadaDeNegocios.Negocios
         public fisioterapeuta ObterUmFisio(int id)
         {
             return df.ObterPorId(id);
+        }
+
+        public List<video> PesquisarVideos(int id,string search)
+        {
+            return dv.ListarVideos(id, search);
         }
     }
 }

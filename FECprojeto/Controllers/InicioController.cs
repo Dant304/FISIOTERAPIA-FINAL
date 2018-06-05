@@ -48,7 +48,10 @@ namespace FECprojeto.Controllers
         {
             return PartialView("_config");
         }
-
+        public PartialViewResult telaVideo(int id)
+        {
+            return PartialView("_videosDetalhe", VideoDetails(id));
+        }
         //Artigo
         public List<artigo> ListarArtigos()
         {
@@ -81,16 +84,24 @@ namespace FECprojeto.Controllers
         }
         public PartialViewResult fisioEdit(int id)
         {
-            fisioterapeuta fis =  fn.ObterUmFisio(id);
-            return PartialView("_fisioterapeutaEdit",fis);
+            fisioterapeuta fis = fn.ObterUmFisio(id);
+            return PartialView("_fisioterapeutaEdit", fis);
         }
-        public List<video> videoSource()
+        public List<video> videoSource(string search)
         {
             var varios = new List<video>();
             int id = Convert.ToInt32(Session["id"]);
             if (Session["UsuarioFisio"] != null)
             {
-                varios = fn.TodosOsVideos(id);
+                if (search == null || search == "")
+                {
+                    varios = fn.TodosOsVideos(id);
+                }
+                else
+                {
+                    varios = fn.PesquisarVideos(id, search);
+                }
+
             }
             else if (Session["UsuarioPac"] != null)
             {
@@ -99,21 +110,30 @@ namespace FECprojeto.Controllers
 
             return varios;
         }
-
-        public PartialViewResult _videos(int? id)
+        List<video> varios;
+        public ActionResult _videos(int? id, string search)
         {
-            List<video> varios = videoSource();
-            if (varios.Count == 0)
+
+            if (id != null || id != 0)
             {
-                ViewBag.Send = "Não há vídeos publicados";
+
+                if (search != "" || search != null)
+                {
+                    varios = videoSource(search);
+                }
+                else
+                    varios = videoSource(null);
+
             }
-            if(id != null)
+            else
             {
-                //eliminar video
                 eliminarVideo(id);
             }
+
+
             return PartialView(varios);
         }
+
         public void eliminarVideo(int? id)
         {
             Videos vid = new Videos();
@@ -122,18 +142,18 @@ namespace FECprojeto.Controllers
         public PartialViewResult artigoSource(int? id)
         {
             List<artigo> varios = ListarArtigos();
-            if(varios.Count == 0)
+            if (varios.Count == 0)
             {
                 ViewBag.mensagem = "Não há artigos publicados";
             }
-            if(id != null)
+            if (id != null)
             {
                 eliminarArtigo(id);
             }
-            
+
             return PartialView("_artigo", varios);
         }
-       
+
         public PartialViewResult _fisioterapeutas(string nome)
         {
             List<fisioterapeuta> search;
@@ -145,14 +165,14 @@ namespace FECprojeto.Controllers
             {
                 search = fn.pesquisarFisio(nome);
             }
-           
+
             return PartialView(search);
         }
 
         public PartialViewResult _fisioterapeutaDetails(int id)
         {
             fisioterapeuta search = null;
-            if(id != 0)
+            if (id != 0)
             {
                 search = fn.ObterUmFisio(id);
             }
@@ -192,8 +212,14 @@ namespace FECprojeto.Controllers
             return View("_config");
         }
 
-
-
+        public PartialViewResult telaCadastroFisio()
+        {
+            return PartialView("_fisioterapeutaCreate");
+        }
+        public PartialViewResult Chat()
+        {
+            return PartialView();
+        }
         public PartialViewResult _profissionalSource(string nome)
         {
             return PartialView();
@@ -241,8 +267,8 @@ namespace FECprojeto.Controllers
         //  {
 
         //  }
-     
-       public void eliminarArtigo(int? id)
+
+        public void eliminarArtigo(int? id)
         {
             Artigos art = new Artigos();
             art.eliminarArt(id);
@@ -258,11 +284,11 @@ namespace FECprojeto.Controllers
                     int fl = file.ContentLength;
                     byte[] array = new byte[fl];
                     file.InputStream.Read(array, 0, fl);
-                    
-                   
+
+
                 }
                 ViewBag.Message = "File Uploaded Successfully!!";
-                return RedirectToAction("View","PageNotFound");
+                return RedirectToAction("View", "PageNotFound");
             }
             catch
             {
@@ -271,8 +297,28 @@ namespace FECprojeto.Controllers
             }
 
         }
+        public PartialViewResult _novoVideo()
+        {
+            return PartialView();
+        }
+        [HttpGet]
+        public RedirectToRouteResult CadastrarVideo(HttpPostedFileBase[] foto)
+        {
+            byte[] imagem = null;
+            using(var bin = new BinaryReader(fot))
+            DadosVideo dv = new DadosVideo();
+            
+                
+           
+            return RedirectToAction("_videos");
+        }
+        public string sessaoTime()
+        {
+            return Session.Timeout.ToString();
+        }
+
     }
 }
 
-    
+
 

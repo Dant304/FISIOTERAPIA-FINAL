@@ -1,58 +1,118 @@
 ﻿@model IEnumerable<CamadaDeDados.Banco.video>
-@{
-    Layout = null;
-}
+@{ Layout = null;}
+
+<script>
+    $(document).ready(function () {
+        $('#corpo').load('../Inicio/_novoVideo');
+        $.getJSON("../Inicio/_videos", function (res) {
+            console.log(res);
+            $("#partial").html(res);
+            $.each(res, function (i, field) {
+                console.log(i);
+                console.log(field);
+                $("#conteudo").append('<td>' + field + "</td>");
+            })
+        });
+    });
+
+
+
+
+
+</script>
 <style>
-    .table > tr > th {
-        background-color: white;
+    #head {
+        background-color: black;
     }
 
-    h2:hover {
-        background-color: white;
-        box-shadow: 1px 1px 20px 1px blue;
-        color: blue;
-        width: 30%;
-        border-radius: 50%;
+    #fechar:hover {
+        opacity: 0.9
+    }
+
+    #mais {
+        background-color: dodgerblue;
+        border: solid 1px white;
+        float: right;
+        border-top-left-radius: 10%;
+        border-bottom-left-radius: 10%;
+    }
+
+        #mais:hover {
+            border: 2px solid dodgerblue;
+            background-color: greenyellow;
+            cursor: pointer;
+        }
+
+            #mais:hover > h6 {
+                text-shadow: 2px 2px 2px green;
+            }
+
+    #conteudo:hover {
+        cursor: pointer;
+        border: solid 2px yellow;
+        box-shadow: yellow 1px 1px 20px 1px;
+    }
+
+    #conteudo > td {
+        height: 20%;
     }
 </style>
 
-<table class="table table-dark">
-    <tr>
-        <th>
-            Categoria
-        </th>
-        <th>
-            Titulo
-        </th>
-        @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario != "fis")
-        {
-            <th>
-                Publicado por:
-            </th>
-        }
+<div style="text-align:center" id="pesqVideo">
+    <input style="width:400px;" type="search" id="pesquisa" name="nome" placeholder="Pesquisar titulo" />
+    <button onclick="search('vid');" type="submit"><i class="fa fa-search"></i>Pesquisar</button>
+</div>
 
-    </tr>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.categoria_problema.nome_cat)
-            </td>
-            <td>
-                <a style="cursor:pointer;" onclick="videoDetalhes(@item.id_video)">  @Html.DisplayFor(modelItem => item.titulo_video)</a>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.fisioterapeuta.nome_fis)
-            </td>
 
-        </tr>
-    }
-
-</table>
 
 <h1 style="text-align:center;">@ViewBag.Send</h1>
-@if (ViewBag.Send != null)
+
+@if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario == "fis" && ViewBag.Send == null)
 {
-    <h2 style="text-align:center;cursor:pointer;">Deseja publicar um video?</h2>
+
+
+
+    <div id="mais" data-toggle="modal" data-target="#novo">
+        <h6 style="color:white">Postar mais video?</h6>
+    </div>
+
+    <div>
+        <div class="modal fade" id="novo" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button id="fechar" style="float:right;width:10%;background-color:red;" type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align:left">Publicar Novo Video</h4>
+                    </div>
+                    <div id="corpo" class="modal-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 }
+
+
+@if (ViewBag.Send != null && FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario != "pac")
+{
+    <h2 style="text-align:center;cursor:pointer;" data-toggle="modal" data-target="#novo">Deseja publicar um video?</h2>
+    <div>
+        <div class="modal fade" id="novo" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button id="fechar" style="float:right;width:10%;background-color:red;" type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align:left">Publicar Novo Video</h4>
+                    </div>
+                    <div id="corpo" class="modal-body">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+

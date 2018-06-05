@@ -62,6 +62,7 @@ namespace CamadaDeDados.Banco
 
         [Column(TypeName = "date")]
         [Display(Name = "Data de nascimento")]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}"),]
         public DateTime nasc_fis { get; set; }
         [Display(Name = "Ativo")]
         public bool ativo_fis { get; set; }

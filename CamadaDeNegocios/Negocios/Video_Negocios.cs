@@ -13,7 +13,7 @@ namespace CamadaDeNegocios.Negocios
         public List<video> ListarVideos(int id)
         {
             DadosVideo dv = new DadosVideo();
-           return dv.ListarVideos(id);
+            return dv.ListarVideos(id,null);
         }
 
         public video umAVideo(int id)
@@ -25,6 +25,13 @@ namespace CamadaDeNegocios.Negocios
         {
             DadosVideo dv = new DadosVideo();
             dv.desativarVideo(id);
+
+
+        }
+        public void CadastrarVideo(video v)
+        {
+            DadosVideo dv = new DadosVideo();
+            dv.SalvarVideo(v);
         }
     }
 }

@@ -34,3 +34,17 @@ C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-ma
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeDados\obj\Debug\CamadaDeDados.csproj.CopyComplete
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeDados\bin\Debug\Newtonsoft.Json.dll
 C:\Users\dan00\Desktop\ProjetoParaOfinalDoSemestre\PROJETO-UNASP-FISIOTERAPIA-master\CamadaDeDados\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeDados\bin\Debug\CamadaDeDados.dll.config
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeDados\bin\Debug\CamadaDeDados.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeDados\bin\Debug\CamadaDeDados.pdb
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeDados\bin\Debug\EntityFramework.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeDados\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeDados\bin\Debug\Newtonsoft.Json.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeDados\bin\Debug\EntityFramework.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeDados\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeDados\bin\Debug\Newtonsoft.Json.xml
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeDados\obj\Debug\CamadaDeDados.csprojResolveAssemblyReference.cache
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeDados\obj\Debug\CamadaDeDados.csproj.CoreCompileInputs.cache
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeDados\obj\Debug\CamadaDeDados.csproj.CopyComplete
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeDados\obj\Debug\CamadaDeDados.dll
+C:\Users\dan00\Desktop\Projeto versão final AVALIACAO\CamadaDeDados\obj\Debug\CamadaDeDados.pdb

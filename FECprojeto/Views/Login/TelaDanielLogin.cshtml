@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "TelaDanielLogin";
     Layout = null;
 }
@@ -7,18 +6,26 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    @Scripts.Render("~/bundles/jquery", "~/bundles/bootstrap", "~/JS/TelaDanielLoginjs")
+
+    @Styles.Render("~/CSS/TelaDanielLogin")
+    <script src="~/Scripts/Inicio/JQueryBlockUI.js"></script>
     <meta charset="utf-8" />
+    <meta http-equiv="Page-Enter" content="RevealTrans (Duration=1, Transition=23)">
+    <meta http-equiv="Page-Exit" content="RevealTrans (Duration=1, Transition=23)">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Fisioterapia em casa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="~/Content/TelaDanielLogin/style.css" rel="stylesheet" />
-    <link href="~/Content/TelaDanielLogin/index.css" rel="stylesheet" />
-    <script src="~/scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/TelaDanielLogin/index.js"></script>
-    <script src="~/Scripts/Inicio/inicial.js"></script>
-   
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Notification.requestPermission();
+        });
+
+    </script>
 </head>
-<body onLoad="frases()">
+<body class="fadeIn">
+
     <nav>
         <div class="grid">
             <div id="loginBtn">Login</div>
@@ -38,18 +45,23 @@
             </article>
         </div>
     </div>
+    <div style="height:1%;display:none;" id="container">
+        <div id="alerta" class="panel panel-danger">
+            <div style="text-align:center;" class="panel-heading">*Aviso</div>
+            <div id="info" style="text-align:center;" class="panel-body">Panel Content</div>
+        </div>
+    </div>
+
+
     <div align="center" class="form">
-        <form action="../Login/logar" method="post">
-            <input type="text" name="email" ng-model="user" placeholder="Login de usuário" required="required" autofocus /><br>
+        <form>
+            <input id="login" type="text" name="login" ng-model="user" placeholder="Login de usuário" required="required" autofocus /><br>
             <input type="password" name="password" id="password" placeholder="Senha de usuário" required="required" /><br>
-            <button onclick="logar();" type="submit">Login</button>
+            <button id="logar" type="button">Login</button>
         </form>
 
     </div>
-
     <footer>DJACK &#169;</footer>
-
-
 </body>
 </html>
 

@@ -101,8 +101,10 @@ namespace CamadaDeDados.Banco.Sql
         }
         public List<fisioterapeuta> ObterTodosSem()
         {
-            return (from f in db.fisioterapeutas select f).ToList();
+               return (from f in db.fisioterapeutas select f).ToList();
+          
         }
+    
         //Método para logar no sistema.
         public bool ProcurarPorUsuario(string email, string senha)
         {

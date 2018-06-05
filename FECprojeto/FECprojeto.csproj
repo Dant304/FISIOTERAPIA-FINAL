@@ -187,11 +187,11 @@
     <Content Include="Content\Inicio\config.css" />
     <Content Include="Content\Inicio\index.css" />
     <Content Include="Content\Inicio\inicial.css" />
+    <Content Include="Content\Inicio\modal-video.min.css" />
     <Content Include="Content\Inicio\style.css" />
     <Content Include="Content\Login\index.css" />
     <Content Include="Content\Login\style.css" />
     <Content Include="Content\PageNotFound\NotFound.css" />
-    <Content Include="Content\TelaDanielFisioterapeuta\adm.css" />
     <Content Include="Content\TelaDanielFisioterapeuta\index.css" />
     <Content Include="Content\TelaDanielFisioterapeuta\inicial.css" />
     <Content Include="Content\TelaDanielFisioterapeuta\style.css" />
@@ -205,6 +205,7 @@
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
     <Content Include="imagens\200.gif" />
+    <Content Include="imagens\fechar-ou-cancelar-esboco-cruz_318-31648.jpg" />
     <Content Include="imagens\homem.png" />
     <Content Include="imagens\Logo-UNASP-01.png" />
     <Content Include="imagens\logo.png" />
@@ -223,6 +224,7 @@
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\Inicio\config.js" />
     <Content Include="Scripts\Inicio\inicial.js" />
+    <Content Include="Scripts\Inicio\JQueryBlockUI.js" />
     <Content Include="Scripts\Inicio\ListarProfissionais.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -282,6 +284,9 @@
     <Content Include="Views\PageNotFound\View.cshtml" />
     <Content Include="Views\Inicio\_fisioterapeutaEdit.cshtml" />
     <Content Include="Views\Inicio\_fisioterapeutaDetails.cshtml" />
+    <Content Include="Views\Inicio\_fisioterapeutaCreate.cshtml" />
+    <Content Include="Views\Inicio\Chat.cshtml" />
+    <Content Include="Views\Inicio\_novoVideo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
