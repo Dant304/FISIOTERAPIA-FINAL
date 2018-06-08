@@ -9,17 +9,31 @@
     @Scripts.Render("~/bundles/jquery", "~/JS/TelaDanielFisioterapeuta", "~/JS/Inicio")
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    @Styles.Render("~/Content/css", "~/CSS/TelaDanielFisioterapeuta", "~/CSS/TelaProfissional", "~/CSS/Inicio")
+    @Styles.Render( "~/CSS/TelaDanielFisioterapeuta", "~/CSS/TelaProfissional", "~/CSS/Inicio")
     <title>Fisioterapia em casa</title>
     <meta http-equiv="X-UA-Compatible" content="IE-edge" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .modal-body .form-horizontal .col-sm-2,
+        .modal-body .form-horizontal .col-sm-10 {
+            width: 100%
+        }
 
+        .modal-body .form-horizontal .control-label {
+            text-align: left;
+        }
 
+        .modal-body .form-horizontal .col-sm-offset-2 {
+            margin-left: 15px;
+        }
+    </style>
+    <script>
+        var nome = '@FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.nome';
+    </script>
     <!-- Estava pondo um relógio que mostrasse o tempo da sessão do usuário-->
 </head>
 
 <body>
-
     <nav id="btns">
         <div class="grid">
             <div id="perfil" onclick="Inicio();">
@@ -77,11 +91,12 @@
         </div>
 
     </nav>
-    <h1 id="hora"></h1>
+    <label id="Session"></label>
+    <!-- Conteudo -->
     @RenderBody()
     <div id="partial">
     </div>
-
+    <!---->
 
     <!---->
     @if (FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.tipoUsuario == "fis" && FECprojeto.Models.Classes.Auxiliares.Sessão.SessaoSistema.Adm == true)
@@ -89,10 +104,30 @@
         <div id="modal"></div>
     }
     <!---->
-    <div style="float:right;margin-top:37%;margin-right:1%;" title="Header" data-toggle="popover" data-placement="left" data-content="Content" id="chat">
-        <img style="border:black 1px solid;box-shadow:white 1px 1px 20px 1px;float:right" src="~/imagens/homem.png" width="40" height="100" />
-    </div>
    
+    <!-- Modal mensageiro-->
+    <!-- Modal -->
+    <div style="height:50%" class="modal fade" id="myModalNorm" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header" style="background-color:dodgerblue;color:white">
+                    <img style="float:left;box-shadow:0px 0px 10px 0px;border-radius:50%" src="~/imagens/logo.png" />
+                    <h4 style="text-align:center" class="modal-title" id="myModalLabel">
+                        Mensagem
+                    </h4>
+                </div>
+
+                <!-- Modal Body -->
+                <div id="conteudo" class="modal-body">
+                </div>
+                <!-- Modal Footer -->
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

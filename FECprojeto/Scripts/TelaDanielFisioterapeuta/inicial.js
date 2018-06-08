@@ -42,7 +42,7 @@ $(window).ready(function () {
 });
 
 $(document).load(function () {
-
+  
     $.blockUI({ message: '<p><img style="margin-top:4%;margin-left:0%;width:15%;height:8%;" src="../imagens/200.gif" alt="Loading..." style="background-color:dodgerblue;border-radius:20%;box-shadow:black 2px 2px 20px 2px;width:10%;height:10%;"/><br\>Carregando...</p>', css: { backgroundColor: 'white', opacity: '0.8', height: '15%', borderRadius: '10%', width: '30%', boxShadow: 'white 1px 1px 20px 1px' } });
     $.ajax({
         url: '../Inicio/_videos',
@@ -68,8 +68,30 @@ function atualizar() {
         })
     })
 }
-$(document).ready(function () {
 
+$(document).ready(function () {
+   
+    var visita;
+    if (document.readyState) {
+        if (visita === null || visita === undefined) {
+            visita = 0;
+        }
+        
+
+        if (sessionStorage !== null && nome === null) {
+            $('myModalNorm').css({ "height": "10%" });
+            $('#myModalLabel').css({ "textAlign": "center", "font-size": "x-large" });
+            $('#conteudo').css({ "textAlign": "center", "font-size": "x-large" });
+            document.getElementById("myModalLabel").innerHTML = 'Boas vindas';
+            document.getElementById("conteudo").innerHTML = "Seja Bem vindo " + nome;
+            $('#myModalNorm').modal('show');
+            visita = 1;
+        }
+
+    } 
+        
+
+   
     $('#profissionaisBtn').click(function () {
         $('#submenu').slideDown();
     });
@@ -89,25 +111,25 @@ $(document).ready(function () {
 
 });
 
-  
 
-function notifique(nome,icone, titulo, mensagem, link) {
+
+function notifique(nome, icone, titulo, mensagem, link) {
 
     if (!Notification) {
         alert('Notificações desabilitadas');
         return;
     } else {
-        if (Notification.requestPermission()) {  
+        if (Notification.requestPermission()) {
             $(document).ready(function () {
-                var notificacao = new Notification(titulo ,{
+                var notificacao = new Notification(titulo, {
                     icon: icone,
                     body: mensagem,
                     link: link
                 });
-               
-           
+
+
             });
-      
+
         }
     }
 
@@ -150,14 +172,24 @@ function pesquisarFisio() {
 }
 
 function videoSourcePage() {
-    document.getElementById('name').innerHTML = "Videos";
-    $('#chat').hide();
-    $('#partial').load('../Inicio/_videos');
+    $.ajax({
+        url: '../Inicio/_videos',
+        contentType: 'application/html;charset=utf-8',
+        type: 'GET',
+        dataType: 'html'
+    })
+        .success(function (res) {
+            document.getElementById('name').innerHTML = "Videos";
+            $('#partial').html(res);
+        });
+   
+   // $('#chat').hide();
+   // $('#partial').load('../Inicio/_videos');
 }
 
 function artigosSource(id) {
     document.getElementById('name').innerHTML = "Artigos";
-    $('[data-toggle="popover"]').popover('hide');
+    $('[data-togglehttp://localhost:55373/imagens/200.gif="popover"]').popover('hide');
     $('#chat').hide();
     $('#partial').load('../Inicio/artigoSource');
 }

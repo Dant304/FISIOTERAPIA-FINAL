@@ -13,7 +13,7 @@ namespace FECprojeto.Models.Classes.Concretas
         /*Propriedades da classe*/
 
        
-        public Image img_fis { get; set; } 
+        public string img_fis { get; set; } 
         public string senha_fis { get; set; }
         public string dados_fis { get; set; }
         public bool ativo_fis { get; set; }
@@ -25,7 +25,7 @@ namespace FECprojeto.Models.Classes.Concretas
         {
 
         }
-        public Fisioterapeuta(int id, Image img_fis, string nome, string telCelular, string cpf, string rg, string email, string senha, String dadosFisio, DateTime dataDeAniversario, bool adm)
+        public Fisioterapeuta(int id, string img_fis, string nome, string telCelular, string cpf, string rg, string email, string senha, String dadosFisio, DateTime dataDeAniversario, bool adm)
         {
             SetIdPessoa(id);
             this.nome = nome;
@@ -39,7 +39,7 @@ namespace FECprojeto.Models.Classes.Concretas
             this.dataDeAniversario = dataDeAniversario;
             this.adm_fis = adm;
         }
-        public Fisioterapeuta(int id, Image img_fis, string nome, string cpf, string rg, string senha, string email, String dadosFisio, DateTime dataDeAniversario, bool adm)
+        public Fisioterapeuta(int id, string img_fis, string nome, string cpf, string rg, string senha, string email, String dadosFisio, DateTime dataDeAniversario, bool adm)
         {
             SetIdPessoa(id);
             this.img_fis = img_fis;

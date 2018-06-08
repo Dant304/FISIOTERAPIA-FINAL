@@ -10,6 +10,7 @@
     @Scripts.Render("~/bundles/jquery", "~/bundles/bootstrap", "~/JS/TelaDanielLoginjs")
 
     @Styles.Render("~/CSS/TelaDanielLogin")
+
     <script src="~/Scripts/Inicio/JQueryBlockUI.js"></script>
     <meta charset="utf-8" />
     <meta http-equiv="Page-Enter" content="RevealTrans (Duration=1, Transition=23)">
@@ -32,7 +33,7 @@
             <div id="sobreBtn">Sobre</div>
         </div>
     </nav>
-    <hr>
+    <hr style="margin-top: 0px;">
     <div id="sobreContent">
         <hgroup>
             <h2>Aquele que estuda medicina sem livros navega num mar desconhecido, mas aquele que estuda medicina sem pacientes não vai ao mar.<br> - William Osler</h2>
@@ -57,7 +58,8 @@
         <form>
             <input id="login" type="text" name="login" ng-model="user" placeholder="Login de usuário" required="required" autofocus /><br>
             <input type="password" name="password" id="password" placeholder="Senha de usuário" required="required" /><br>
-            <button id="logar" type="button">Login</button>
+            <button id="logar" type="button">Login</button><br/>
+            <a style="cursor:pointer" data-trigger="hover" data-toggle="popover" data-content="Para ter acesso ao sistema,será necessário está cadastrado em uma clínica que utilize este sistema.">Não possui uma conta?</a>
         </form>
 
     </div>

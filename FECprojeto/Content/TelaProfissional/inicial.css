@@ -1,8 +1,9 @@
 img{
-    height: 30px;;
+    height: 30px;
     border-radius: 10px;
 }
 
 #configBtn , #sairBtn{
     background-color: rgb(118, 177, 172);
+    
 }

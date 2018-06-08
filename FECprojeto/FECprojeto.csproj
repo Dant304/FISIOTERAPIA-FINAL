@@ -290,6 +290,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Usuarios\Fisioterapeutas\" />
+    <Folder Include="Usuarios\Pacientes\" />
+    <Folder Include="Usuarios\videosThumb\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

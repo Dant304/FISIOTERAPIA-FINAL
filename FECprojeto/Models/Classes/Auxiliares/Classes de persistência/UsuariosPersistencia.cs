@@ -9,7 +9,7 @@ namespace FECprojeto.Models.Classes.Auxiliares.Classes_de_persistência
 {
     public class UsuariosPersistencia
     {
-   
+        
         Paciente pac = new Paciente();
         public Fisioterapeuta FisioterapeutaComCelularClasse(fisioterapeuta f)
         {     
@@ -26,17 +26,17 @@ namespace FECprojeto.Models.Classes.Auxiliares.Classes_de_persistência
             {
                 Sessão.SessaoSistema.Adm = f.adm_fis;
             }
-            if (f.img_fis == null && f.sexo_fis == true)
+            if (f.img_fisURL == null && f.sexo_fis == true)
             {
                 Sessão.SessaoSistema.imagemUsuario = null;
                 Sessão.SessaoSistema.imagemNull = "../imagens/homem.png";
             }
-            else if (f.img_fis == null && f.sexo_fis == false)
+            else if (f.img_fisURL == null && f.sexo_fis == false)
             {
                 Sessão.SessaoSistema.imagemUsuario = null;
                 Sessão.SessaoSistema.imagemNull = "../imagens/mulher.jpg";
             }
-            else if(f.img_fis != null)
+            else if(f.img_fisURL != null)
             {
                 Sessão.SessaoSistema.imagemUsuario = null;
                 Sessão.SessaoSistema.imagemUsuario = fis.img_fis;
@@ -58,17 +58,17 @@ namespace FECprojeto.Models.Classes.Auxiliares.Classes_de_persistência
             {
                 Sessão.SessaoSistema.Adm = f.adm_fis;
             }
-            if (f.img_fis == null && f.sexo_fis == true)
+            if (f.img_fisURL == null && f.sexo_fis == true)
             {
                 Sessão.SessaoSistema.imagemUsuario = null;
                 Sessão.SessaoSistema.imagemNull = "../imagens/homem.png";
             }
-            else if (f.img_fis == null && f.sexo_fis == false)
+            else if (f.img_fisURL == null && f.sexo_fis == false)
             {
                 Sessão.SessaoSistema.imagemUsuario = null;
                 Sessão.SessaoSistema.imagemNull = "../imagens/mulher.jpg";
             }
-            else if (f.img_fis != null)
+            else if (f.img_fisURL != null)
             {
                 Sessão.SessaoSistema.imagemUsuario = fis.img_fis;
             }

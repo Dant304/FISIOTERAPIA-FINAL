@@ -11,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Web;
+using System.Web.Helpers;
 using System.Web.Mvc;
 using System.Web.UI.WebControls;
 
@@ -122,7 +123,10 @@ namespace FECprojeto.Controllers
                     varios = videoSource(search);
                 }
                 else
+                {
                     varios = videoSource(null);
+                }
+
 
             }
             else
@@ -299,17 +303,29 @@ namespace FECprojeto.Controllers
         }
         public PartialViewResult _novoVideo()
         {
-            return PartialView();
+            DadosCategoria dc = new DadosCategoria();
+            List<categoria_problema> cat = dc.ObterTodasAsCategorias();
+            return PartialView(cat);
         }
-        [HttpGet]
-        public RedirectToRouteResult CadastrarVideo(HttpPostedFileBase[] foto)
+        [HttpPost]
+        public RedirectToRouteResult CadastrarVideo(HttpPostedFileBase imagem,string titulo ,int categoria, string url, string desc)
         {
-            byte[] imagem = null;
-            using(var bin = new BinaryReader(fot))
-            DadosVideo dv = new DadosVideo();
-            
-                
-           
+            string path = null;
+            string filename = null;
+            if (imagem != null)
+            {
+                 filename = System.IO.Path.GetFileName(imagem.FileName);
+                 path = System.IO.Path.Combine(Server.MapPath("~/Usuarios/videosThumb"), filename);
+                imagem.SaveAs(path);
+               
+            }
+
+
+            Videos v = new Videos(0, path, titulo, url, desc, categoria);
+            v.EnviarVideo(v);
+
+
+
             return RedirectToAction("_videos");
         }
         public string sessaoTime()

@@ -43,7 +43,7 @@ namespace CamadaDeDados.Banco.Sql
             {
                 if (search == null || search == "")
                 {
-                    return (from v in db.videos where v.id_fis == id orderby v.id_video ascending select v).ToList();
+                    return (from v in db.videos where v.id_fis == id orderby v.id_video descending select v).ToList();
                 }
                 else if (search != null || search != "")
                 {

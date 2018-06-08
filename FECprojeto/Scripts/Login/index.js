@@ -1,4 +1,5 @@
 $(document).ready(() => {
+
     const $sobreBtn = document.getElementById("sobreBtn");
     const $loginBtn = document.getElementById("loginBtn");
     $("#sobreContent").hide();
@@ -11,5 +12,10 @@ $(document).ready(() => {
         $('.form').show();
         $('#sobreContent').hide();
         $('#Aviso').hide();
-    } );
+    });
+
+
+
+ 
+   
 });

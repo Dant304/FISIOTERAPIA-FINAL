@@ -13,13 +13,15 @@ namespace CamadaDeDados.Banco
         public paciente()
         {
             acessars = new HashSet<acessar>();
+            mensagems = new HashSet<mensagem>();
+            opiniao_pac_fis = new HashSet<opiniao_pac_fis>();
             fisioterapeutas = new HashSet<fisioterapeuta>();
         }
 
         [Key]
         public int id_pac { get; set; }
 
-        public byte[] img_pac { get; set; }
+        public string img_pac { get; set; }
 
         [Required]
         [StringLength(30)]
@@ -69,6 +71,12 @@ namespace CamadaDeDados.Banco
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<acessar> acessars { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<mensagem> mensagems { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<opiniao_pac_fis> opiniao_pac_fis { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<fisioterapeuta> fisioterapeutas { get; set; }

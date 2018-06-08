@@ -27,7 +27,7 @@ namespace CamadaDeDados.Banco
         public string conteudo_artDic { get; set; }
 
         public bool ativo_artigo { get; set; }
-        [DisplayFormat(DataFormatString = "0:dd/MM/yyyy")]
+
         public DateTime data_artigo { get; set; }
 
         public int id_cat { get; set; }

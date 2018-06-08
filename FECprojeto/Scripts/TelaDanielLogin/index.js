@@ -102,9 +102,91 @@ $(window).ready(function () {
 
 });
 
-    
+function logar() {
+    $('#logar').click(function () {
 
+
+        var login = document.getElementById('login').value;
+        var senha = document.getElementById('password').value;
+
+        if (login === "" && senha === "" || login === undefined && senha === undefined) {
+            console.log('S E vazios'),
+                $('#login').css({ "border": "solid 1px red", "box-shadow": "red 1px 1px 20px 1px" }),
+                $('#password').css({ "border": "solid 1px red", "box-shadow": "red 1px 1px 20px 1px" }),
+                document.getElementById('info').innerHTML = "*Campos 'login' e 'senha' vazios!";
+
+            $('#container').slideDown();
+        } else if (login === "" || login === undefined) {
+            $('#password').removeAttr('style');
+            $('#login').css({ "border": "solid 1px red", "box-shadow": "red 1px 1px 20px 1px" }),
+                document.getElementById('info').innerHTML = "*Campo 'login' vazio!",
+                $('#container').slideDown(),
+                console.log('E vazio');
+        } else if (senha === "" || senha === undefined) {
+            $('#password').css({ "border": "solid 1px red", "box-shadow": "red 1px 1px 20px 1px" }),
+                $('#alerta').slideDown(),
+                $('#login').removeAttr('style'),
+                document.getElementById('info').innerHTML = "*Campo 'senha' vazio!",
+                $('#container').slideDown(),
+                console.log('S vazio');
+        }
+        else {
+            $('#password').removeAttr('style');
+            $('#login').removeAttr('style');
+            $.get("../Login/logar", { login: login, password: senha }, function (data) {
+                console.log(data);
+
+                if (data === null) {
+                    document.getElementById('info').innerHTML = "Dados não encontrados1!";
+                    $('#container').slideDown();
+                }
+                else {
+                    if (data.value === 1) {
+                        $(location).attr("../Inicio/IndexFisioterapeuta");
+                        console.log('Fisio sem celular');
+
+                    }
+                    else if (data.value === 2) {
+
+                        $("body").fadeIn(1000, function () {
+                            window.location = "../Inicio/IndexFisioterapeuta";
+                        });
+
+
+                        console.log('Fisio com celular');
+
+                    }
+                    else if (data.value === 3) {
+                        $(location).attr("../Inicio/IndexPaciente");
+                        console.log('Pac sem celular');
+
+                    }
+                    else if (data.value === 4) {
+                        $(location).attr("../Inicio/IndexPaciente");
+                        console.log('Pac com celular');
+
+                    }
+                }
+
+            }
+
+
+
+            );
+        }
+
+
+    });
+
+
+}
+  $(document).keypress(function (e) {
+        if (e.which === 13 || e.keyCode === 13) {
+            logar();
+        }
+    });
 $(window).load(function () {
+   
     document.addEventListener('DOMContentLoaded', function () {
         Notification.requestPermission('Deseja ativar as notificações?');
     });
@@ -113,6 +195,7 @@ $(window).load(function () {
 });
 
 $(document).ready(function () {
+  
     $('#sobreBtn').click(function () {
         $('#container').hide();
         $('.form').hide();

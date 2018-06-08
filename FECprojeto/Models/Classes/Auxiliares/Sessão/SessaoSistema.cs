@@ -64,7 +64,7 @@ namespace FECprojeto.Models.Classes.Auxiliares.Sessão
                 HttpContext.Current.Session["adm"] = value;
             }
         }
-        public static Image imagemUsuario;
+        public static string imagemUsuario;
         public static string imagemNull;
        
 

@@ -32,9 +32,13 @@ namespace CamadaDeDados.Banco
 
         public int id_fis { get; set; }
 
+        public int id_pac { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<acessar> acessars { get; set; }
 
         public virtual fisioterapeuta fisioterapeuta { get; set; }
+
+        public virtual paciente paciente { get; set; }
     }
 }
